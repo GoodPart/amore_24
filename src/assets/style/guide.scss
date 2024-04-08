@@ -1,0 +1,91 @@
+.wrap {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.example-area {
+    width: 640px;
+}
+
+.guide__title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.bannerDiscount {
+    padding: 20px;
+
+    .swiper-container {
+        position: relative;
+        border-radius: 12px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+}
+.swiper {
+    &:hover {
+        .swiper-prev,
+        .swiper-next {
+            display: block;
+        }
+    }
+
+    .imgBox {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+    }
+    .imgBox img {
+        width: 100%;
+        height: auto;
+    }
+
+    .atom-icon {
+        display: inline-block;
+        overflow: hidden;
+        font-size: 0;
+        white-space: nowrap;
+        vertical-align: top;
+    }
+
+    .atom-icon.ic_angle_flicking_right_s35 {
+        width: 35px;
+        height: 35px;
+        background: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/svg/ic/ic_angle_flicking_right_s35.svg) no-repeat 50%;
+        background-size: contain;
+    }
+    .atom-icon.ic_angle_flicking_left_s35 {
+        width: 35px;
+        height: 35px;
+        background: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/svg/ic/ic_angle_flicking_left_s35.svg) no-repeat 50%;
+        background-size: contain;
+    }
+}
+.swiper-prev,
+.swiper-next {
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:after {
+        display: none;
+    }
+}
+.swiper-next {
+    right: 0;
+}
+.swiper-pagination-horizontal.swiper-pagination {
+    top: inherit;
+    bottom: 25px;
+    background-color: #fff;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    height: 1px;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background-color : #222;
+}
