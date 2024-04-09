@@ -1,4 +1,51 @@
-export function Header() {
+import React, { useState } from "react";
+
+
+const linkList = [
+    {
+        active : false,
+        title: "아모레 몰",
+        apClickArea: "스토어_공통",
+        apClickName: "스토어_공통_Header_[팝업] 몰 이동 레이어",
+        apClickData: "아모레 몰 버튼",
+        icon: "ic_gnb_logo_amore_96"
+    },
+    {
+        active : true,
+        title: "아모레 스토어",
+        apClickArea: "스토어_공통",
+        apClickName: "스토어_공통_Header_[팝업] 몰 이동 레이어",
+        apClickData: "아모레 스토어 버튼",
+        icon: "ic_gnb_logo_amore_store_64"
+    },
+
+]
+
+export function ModuleLinkPopup({data}) {
+
+    const result = Object.values(data).map((ele, index) => {
+        return (
+            <li className={Boolean(ele.active) && "is-active"} key={index}>
+                <button ap-click-area={ele.apClickArea} ap-click-name={ele.apClickName} ap-click-data={ele.apClickData}>
+                    <div className="linkThumb">
+                        <i className={`icon ${ele.icon}`}></i>
+                    </div>
+                    <p className="linkText">{ ele.title}</p>
+                </button>
+            </li>
+        )
+    })
+    return (
+        <ul className="module-linkPopup">
+            {result}
+        </ul>
+    )
+}
+
+export function Header({state, hide}) {
+
+    
+
     return (
         <header className="module-header is-scroll">
             <div className="module-header__inner">
@@ -9,23 +56,12 @@ export function Header() {
                     </a>
                 </div>
 
-                <div class="module-header__logo-link">
+                <div className={`module-header__logo-link ${state ? 'is-active' : ''}`}>
                     <button ap-click-area="스토어_공통" ap-click-name="스토어_공통_Header" ap-click-data="몰 이동 열기 버튼">
-                        <i class="atom-icon ic_angle_down_circle_fill_s24">열기/닫기</i>
+                        <i className="atom-icon ic_angle_down_circle_fill_s24">열기/닫기</i>
                     </button>
-                    <ul class="module-linkPopup">
-                        <li class="">
-                            <button ap-click-area="스토어_공통" ap-click-name="스토어_공통_Header_[팝업] 몰 이동 레이어" ap-click-data="아모레 몰 버튼">
-                                <div class="linkThumb">
-                                    <i class="icon ic_gnb_logo_amore_96"></i>
-                                </div>
-                                <p class="linkText">아모레 몰</p>
-                            </button>
-                        </li>
-                        <li class="is-active"><button ap-click-area="스토어_공통" ap-click-name="스토어_공통_Header_[팝업] 몰 이동 레이어" ap-click-data="아모레 스토어 버튼"><div class="linkThumb"><i class="icon ic_gnb_logo_amore_store_64"></i></div><p class="linkText">아모레 스토어</p></button>
-                        </li>
-                    </ul>
-
+                    
+                    <ModuleLinkPopup data={linkList} />
                 </div>
                 <div className="module-header__util">
                     <a href="" className="module-header__btn module-header__btn--user" ap-click-area="공통" ap-click-name="스토어_공통_Header" ap-click-data="마이페이지 버튼">마이</a>
@@ -39,7 +75,7 @@ export function Header() {
                 </h2>
                 <p className="module-header__desc--default">내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!</p>
             </div>
-            <div id="aniHeader" className="module-header-layer module-header--ani is-clear is-hide">
+            <div id="aniHeader" className={`module-header-layer module-header--ani is-clear ${hide ? 'is-hide' : ''}`}>
                 <h1 className="module-header__title--ani">아모레성수</h1>
                 <div className="module-header__util">
                     <a href="" className="module-header__btn module-header__btn--user" ap-click-area="공통" ap-click-name="스토어_공통_Header" ap-click-data="마이페이지 버튼">마이</a>

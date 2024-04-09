@@ -49,6 +49,7 @@
     font-size: 0;
     white-space: nowrap;
     vertical-align: top;
+    transition: transform .25s linear;
 
    &.logo_amoreStore_s165x28_fff {
         width: 165px;
@@ -300,15 +301,12 @@ table td {
     position: relative;
     margin-left: 6px;
 
-
     .module-linkPopup {
-        // display: none;
+        display: none;
         position: absolute;
         top: 40px;
         right: 0;
         z-index: 2;
-
-        
     }
     
     button {
@@ -323,6 +321,15 @@ table td {
         overflow: visible;
         line-height: 1;
         display: inline-block;
+    }
+
+    &.is-active {
+        .module-linkPopup {
+            display: block;
+        }
+        button i {
+            transform: rotate(180deg);
+        }
     }
 }
 .module-header--default {
@@ -358,6 +365,7 @@ table td {
 }
 
 .module-header-layer {
+    z-index: 1000;
     display: flex;
     flex: 0 0 auto;
     align-items: center;

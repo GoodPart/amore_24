@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -46,18 +47,53 @@ const codeSwiperSlide = `<SwiperSlide>
 
 
 export default function Layout() {
+    const [hide, setHide] = useState(true);
+
+    useEffect(() => {
+        window.addEventListener('scroll',  handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [])
+    const handleScroll = () => {
+        console.log('scrolled', window.scrollY);
+        if (window.scrollY >= 550) {
+            setHide(false)
+            console.log('hide false')
+        } else {
+            setHide(true)
+        }
+    };
     return <div className="wrap">
         <div className="wrap__container">
             <div className="wrap__item">
-                <h1 className="title">header</h1>
+                <h1 className="title">header - 몰 이동 열기 버튼 false</h1>
                 <div className="description">
-                    <CopyBlock text={headerCode} language='js' theme={a11yDark} />
-                    <Header />
-                    최상단 영역으로, scrollY값이 .module-header__inner의 높이(56px)보다 크다면<br />
-                    .module-header-layer에 .is-hide클래스 제거한다.
+                    <Header state={false} hide={true} />
+                </div>
+                <div className="example-area">
+
+                </div>
+            </div>
+            <div className="wrap__item">
+                <h1 className="title">header - 몰 이동 열기 버튼 true</h1>
+                <div className="description">
+                    {/* <CopyBlock text={headerCode} language='js' theme={a11yDark} /> */}
+                    <Header state={true} hide={true}/>
                 </div>
                 <div className="example-area">
                     
+                </div>
+            </div>
+
+            <div className="wrap__item">
+                <h1 className="title">header - 헤더 하방 스크롤</h1>
+                <div className="description">
+                    <Header state={false} hide={hide} />
+                </div>
+                <div className="example-area">
+
                 </div>
             </div>
 
