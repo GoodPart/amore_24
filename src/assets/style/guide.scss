@@ -10,6 +10,8 @@
 }
 
 .example-area {
+    display: flex;
+    flex-direction: column;
     width: 640px;
 }
 
@@ -18,7 +20,8 @@
     font-weight: 700;
 }
 .description {
-    padding: 20px;
+    width: 640px;
+    // padding: 20px;
 }
 
 /* 전면 스와이프 스타일 - 시작 */
@@ -140,7 +143,7 @@
 }
 /* 전면 스와이프 스타일 - 끝 */
 
-/* 룰 스타일 스타일 - 시작 */
+/* 룰 스타일 - 시작 */
 h1 {
     font-size: 30px;
     font-weight: bold;
@@ -191,10 +194,10 @@ table td {
     &:first-child {
     }
 }
-/* 룰 스타일 스타일 - 끝 */
+/* 룰 스타일 - 끝 */
 
 
-/* header 스타일 스타일 - 시작 */
+/* header 스타일 - 시작 */
 .module-header {
     top: 0;
     left: 0;
@@ -433,6 +436,77 @@ table td {
 .module-header-layer.is-clear .module-header__btn--user:after {
     background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/svg/ic/ic_user_s32_fff.svg);
 }
+/* header 스타일 - 끝 */
 
+/* tabWrap 스타일 - 시작 */
+.tabWrap {
+    display: block;
+    height: 300px; // 임시
+    background-color: #efefef;
+    
+}
+.tabs {
+    position: sticky;
+    top: 55px;
+    display: flex;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+    z-index: 100;
+    height: 50px;
+    padding: 0 20px;
 
-/* header 스타일 스타일 - 끝 */
+    .tab {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 52px;
+        font-size: 16px;
+
+        &:first-child {
+            justify-content: center;
+            text-align: left;
+        }
+
+        &.on {
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+    .tab .inner {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.o2o-skin {
+    .tabs .tab {
+        position: relative;
+        flex: inherit;
+        min-width: 51px;
+        height: 50px;
+        padding: 0;
+        color: #333;
+        margin-left: 20px;
+    }
+    .tabs .tab .inner{
+        min-width: inherit;
+        height: 50px;
+        font-size: 18px;
+    }
+    .tabs .tab.on .inner {
+        border-bottom: 0;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #333545;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+    }
+}
+/* tabWrap 스타일 - 끝 */

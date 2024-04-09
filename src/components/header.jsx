@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-
+const mapInfo = {
+    title: "아모레성수",
+    desc : "내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!"
+}
 const linkList = [
     {
         active : false,
@@ -60,7 +63,6 @@ export function Header({state, hide}) {
                     <button ap-click-area="스토어_공통" ap-click-name="스토어_공통_Header" ap-click-data="몰 이동 열기 버튼">
                         <i className="atom-icon ic_angle_down_circle_fill_s24">열기/닫기</i>
                     </button>
-                    
                     <ModuleLinkPopup data={linkList} />
                 </div>
                 <div className="module-header__util">
