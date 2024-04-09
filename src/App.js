@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/layout";
 import { StyleGuide } from "./pages/style";
+import { Name } from "./pages/name";
 import Gnb from "./navigate";
 import "./assets/style/common.scss"
 
@@ -11,7 +12,8 @@ function App() {
         <Gnb />
         <Routes>
           <Route path="/" exact element={<Layout />} />
-          <Route path="/style" exact element={<StyleGuide />} />
+          <Route path="/style" element={<StyleGuide />} />
+          <Route path="/rull_name" element={<Name />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -8,6 +8,9 @@ export default function Gnb() {
             <li>
                 <Link to={'/style'}>스타일</Link>
             </li>
+            <li>
+                <Link to={'/rull_name'}>네임규칙</Link>
+            </li>
         </ul>
     )
 }

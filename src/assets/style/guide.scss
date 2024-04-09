@@ -1,6 +1,6 @@
 .wrap {
     margin: 0 auto;
-    width: 1200px;
+    width: 1024px;
 }
 
 .example-area {
@@ -12,6 +12,7 @@
     font-weight: 700;
 }
 
+/* 전면 스와이프 스타일 - 시작 */
 .bannerDiscount {
     padding: 20px;
 
@@ -25,8 +26,13 @@
 }
 .swiper {
     &:hover {
-        .swiper-prev,
-        .swiper-next {
+        // .swiper-prev,
+        // .swiper-next {
+        //     display: block;
+        // }
+
+        .swiper-prev:not(.swiper-button-disabled),
+        .swiper-next:not(.swiper-button-disabled){
             display: block;
         }
     }
@@ -71,6 +77,10 @@
     top: 50%;
     transform: translateY(-50%);
 
+    &.swiper-button-disabled {
+        display: none;
+    }
+
     &:after {
         display: none;
     }
@@ -89,3 +99,57 @@
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background-color : #222;
 }
+/* 전면 스와이프 스타일 - 끝 */
+
+/* 룰 스타일 스타일 - 시작 */
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+
+//table
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-bottom: 1px solid #333;
+}
+caption {
+    height: 1px;
+    overflow: hidden;
+}
+
+table th, table td {
+    height: 40px;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+table th {
+    padding: 3px 15px;
+    text-align: center;
+    font-weight: 400;
+    word-break: keep-all;
+    border-bottom: 1px solid #666;
+    background-color: #f8f8f8;
+}
+table td {
+    padding: 3px 15px;
+    border: 1px solid #eee;
+    border-bottom: 0;
+
+    &:first-child {
+    }
+}
+/* 룰 스타일 스타일 - 끝 */

@@ -22,7 +22,7 @@ export default function Layout() {
             <div className="wrap__item">
                 <h1 className="title">swiper</h1>
                 <div className="description">
-                    
+                    `asdasd`
                 </div>
                 <div className="example-area">
                     <div className="bannerDiscount">
