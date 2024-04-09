@@ -48,6 +48,7 @@ const codeSwiperSlide = `<SwiperSlide>
 
 export default function Layout() {
     const [hide, setHide] = useState(true);
+    const targetHeader = 590 + 65;
 
     useEffect(() => {
         window.addEventListener('scroll',  handleScroll);
@@ -57,10 +58,9 @@ export default function Layout() {
         };
     }, [])
     const handleScroll = () => {
-        console.log('scrolled', window.scrollY);
-        if (window.scrollY >= 550) {
+        
+        if (window.scrollY >= targetHeader) {
             setHide(false)
-            console.log('hide false')
         } else {
             setHide(true)
         }
@@ -68,7 +68,7 @@ export default function Layout() {
     return <div className="wrap">
         <div className="wrap__container">
             <div className="wrap__item">
-                <h1 className="title">header - 몰 이동 열기 버튼 false</h1>
+                <h1 className="title">header - 몰 이동 열기 버튼 False</h1>
                 <div className="description">
                     <Header state={false} hide={true} />
                 </div>
@@ -77,7 +77,7 @@ export default function Layout() {
                 </div>
             </div>
             <div className="wrap__item">
-                <h1 className="title">header - 몰 이동 열기 버튼 true</h1>
+                <h1 className="title">header - 몰 이동 열기 버튼 True</h1>
                 <div className="description">
                     {/* <CopyBlock text={headerCode} language='js' theme={a11yDark} /> */}
                     <Header state={true} hide={true}/>
@@ -88,7 +88,7 @@ export default function Layout() {
             </div>
 
             <div className="wrap__item">
-                <h1 className="title">header - 헤더 하방 스크롤</h1>
+                <h1 className="title">header - 스크롤 해주세요.</h1>
                 <div className="description">
                     <Header state={false} hide={hide} />
                 </div>

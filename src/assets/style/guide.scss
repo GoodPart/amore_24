@@ -3,6 +3,12 @@
     width: 1024px;
 }
 
+.wrap__container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
 .example-area {
     width: 640px;
 }
