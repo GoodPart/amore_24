@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { CopyBlock, nord, vs2015 } from 'react-code-blocks';
+import { CopyBlock, nord, a11yDark } from 'react-code-blocks';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 import { Header, headerCode } from '../components/header';
@@ -51,7 +51,7 @@ export default function Layout() {
             <div className="wrap__item">
                 <h1 className="title">header</h1>
                 <div className="description">
-                    <CopyBlock text={headerCode} language='js' theme={vs2015} />
+                    <CopyBlock text={headerCode} language='js' theme={a11yDark} />
                     <Header />
                     최상단 영역으로, scrollY값이 .module-header__inner의 높이(56px)보다 크다면<br />
                     .module-header-layer에 .is-hide클래스 제거한다.
@@ -64,10 +64,10 @@ export default function Layout() {
             <div className="wrap__item">
                 <h1 className="title">swiper</h1>
                 <div className="description">
-                    <CopyBlock text={code} language='js' theme={vs2015} />
+                    <CopyBlock text={code} language='js' theme={a11yDark} />
 
                     <h2>SwiperSlide</h2>
-                    <CopyBlock text={codeSwiperSlide} language='js' theme={vs2015} />
+                    <CopyBlock text={codeSwiperSlide} language='js' theme={a11yDark} />
                 </div>
                 <div className="example-area">
                     <div className="bannerDiscount">

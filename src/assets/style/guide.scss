@@ -27,6 +27,42 @@
         margin: 0 auto;
     }
 }
+
+.icon {
+    display: inline-flex;
+    &.ic_gnb_logo_amore_96,
+    &.ic_gnb_logo_amore_store_64 {
+        height: 32px;
+        background-size: 32px 32px;
+    }
+    
+    &.ic_gnb_logo_amore_96 {
+        background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/png/logo/logo_amoreMall_s96.png);
+    }
+    &.ic_gnb_logo_amore_store_64 {
+        background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/png/logo/logo_amoreStore_s64.jpg);
+    }
+}
+.atom-icon {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap;
+    vertical-align: top;
+
+   &.logo_amoreStore_s165x28_fff {
+        width: 165px;
+        height: 28px;
+        background: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/svg/logo/logo_amoreStore_s165x28_fff.svg) no-repeat 50%;
+        background-size: contain;
+   };
+   &.ic_angle_down_circle_fill_s24 {
+        width: 24px;
+        height: 24px;
+        background: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/core/svg/ic/ic_angle_down_circle_fill_s24.svg) no-repeat 50%;
+        background-size: contain;
+   }
+}
 .swiper {
     &:hover {
         // .swiper-prev,
@@ -50,13 +86,6 @@
         height: auto;
     }
 
-    .atom-icon {
-        display: inline-block;
-        overflow: hidden;
-        font-size: 0;
-        white-space: nowrap;
-        vertical-align: top;
-    }
 
     .atom-icon.ic_angle_flicking_right_s35 {
         width: 35px;
@@ -174,12 +203,127 @@ table td {
         position: inherit
     }
 }
+.module-header:not(.shop-header) .module-header__logo-img.is-black {
+    opacity: 0;
+}
 .module-header__inner {
     display: flex;
     align-items: center;
     height: 56px;
     padding: 0 15px;
     width: 100%;
+}
+.module-header__logo {
+    flex: 0 0 auto;
+    position: relative;
+    width: 158px;
+    height: 32px;
+
+    a {
+        display: block;
+        font-size: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+.module-header__logo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.module-linkPopup {
+    width: 200px;
+    padding: 12px 0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
+
+    li {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        padding: 0 20px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &.is-active {
+            .linkThumb {
+                position: relative;
+            }
+            .linkThumb:after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                right: -3px;
+                width: 10px;
+                height: 10px;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                background-color: #ff5a5a;
+            }
+            .linkText {
+                font-size: 16px;
+                font-weight: 700;
+                color: #000;
+            }
+        }
+    }
+
+    li button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .linkThumb {
+        border-radius: 10px;
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        background-color: #ddd;
+
+        i {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    
+}
+.module-header__logo-link {
+    position: relative;
+    margin-left: 6px;
+
+
+    .module-linkPopup {
+        // display: none;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        z-index: 2;
+
+        
+    }
+    
+    button {
+        text-transform: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        color: inherit;
+        background: transparent;
+        overflow: visible;
+        line-height: 1;
+        display: inline-block;
+    }
 }
 .module-header--default {
     position: relative;
@@ -233,7 +377,7 @@ table td {
     background-color: #333545;
 
     &.is-hide {
-        // display: none;
+        display: none;
     }
 }
 .module-header__title--ani {
@@ -269,9 +413,12 @@ table td {
         height: 100%;
         background-repeat: no-repeat;
         background-size: contain;
+    background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/svg/ic/ic_user_s32_fff.svg);
     }
 }
 .module-header-layer.is-clear .module-header__btn--user:after {
     background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/svg/ic/ic_user_s32_fff.svg);
 }
+
+
 /* header 스타일 스타일 - 끝 */
