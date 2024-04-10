@@ -6,13 +6,18 @@
 .wrap__container {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 60px;
 }
 
 .example-area {
     display: flex;
     flex-direction: column;
     width: 640px;
+
+    &--row {
+        flex-direction: inherit;
+        gap: 12px;
+    }
 }
 
 .guide__title {
@@ -172,9 +177,14 @@
 /* 전면 스와이프 스타일 - 끝 */
 
 /* 룰 스타일 - 시작 */
-h1 {
-    font-size: 30px;
+h1.title {
+    font-size: 26px;
     font-weight: bold;
+}
+h1.title + .description {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #777;
 }
 h2 {
     font-size: 24px;

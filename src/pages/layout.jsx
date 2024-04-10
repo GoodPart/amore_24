@@ -198,27 +198,28 @@ export default function Layout() {
     return <div className="wrap o2o-skin">
         <div className="wrap__container">
             <div className="wrap__item">
-                <h1 className="title">header - 몰 이동 열기 버튼 False</h1>
+                <h1 className="title"><span>Header</span> - 몰 이동 열기 버튼</h1>
                 <div className="description">
+                    로고 우측 화살표 버튼을 클릭하면 다른 몰로 이동할 수 있는 드롭다운 메뉴가 등장합니다.<br />
+                    상태는 닫기 입니다.
+                </div>
+                <div className="example-area">
                     <Header state={false} hide={true} />
                 </div>
-                <div className="example-area">
-
-                </div>
             </div>
             <div className="wrap__item">
-                <h1 className="title">header - 몰 이동 열기 버튼 True</h1>
+                <h1 className="title"><span>Header</span> - 몰 이동 열기 버튼</h1>
                 <div className="description">
-                    {/* <CopyBlock text={headerCode} language='js' theme={a11yDark} /> */}
+                    로고 우측 화살표 버튼을 클릭하면 다른 몰로 이동할 수 있는 드롭다운 메뉴가 등장합니다.
+                    상태는 열기 입니다.
+                </div>
+                <div className="example-area">
                     <Header state={true} hide={true}/>
                 </div>
-                <div className="example-area">
-                    
-                </div>
             </div>
 
             <div className="wrap__item">
-                <h1 className="title">header (sticky)</h1>
+                <h1 className="title"><span>Header</span> (sticky)</h1>
                 <div className="description">
                     <Header state={false} hide={hide} />
                 </div>
@@ -283,7 +284,29 @@ export default function Layout() {
                 <div className="description">
                     
                 </div>
-                <div className="example-area">
+                <div className="example-area example-area--row">
+                    <button
+                        className="btnCategory"
+                        ap-click-area="스토어_매장 홈"
+                        ap-click-name="스토어_매장홈_퀵아이콘"
+                        ap-click-data="공유버튼"
+                        onClick={()=> alert("전화")}
+                    >
+                        <span className="ico">
+                            <img src="https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_phone_s51_3a416f.svg" />
+                        </span><span className="text">전화</span>
+                    </button>
+                    <button
+                        className="btnCategory"
+                        ap-click-area="스토어_매장 홈"
+                        ap-click-name="스토어_매장홈_퀵아이콘"
+                        ap-click-data="공유버튼"
+                        onClick={()=> alert("예약")}
+                    >
+                        <span className="ico">
+                        <img src="https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_calendar_s51_3a416f.svg" />
+                        </span><span className="text">예약</span>
+                    </button>
                     <button
                         className="btnCategory"
                         ap-click-area="스토어_매장 홈"
