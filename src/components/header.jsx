@@ -28,7 +28,7 @@ export function ModuleLinkPopup({data}) {
 
     const result = Object.values(data).map((ele, index) => {
         return (
-            <li className={Boolean(ele.active) && "is-active"} key={index}>
+            <li className={ Boolean(ele.active) ? "is-active" : ""} key={index}>
                 <button ap-click-area={ele.apClickArea} ap-click-name={ele.apClickName} ap-click-data={ele.apClickData}>
                     <div className="linkThumb">
                         <i className={`icon ${ele.icon}`}></i>
@@ -59,7 +59,7 @@ export function Header({state, hide}) {
                     </a>
                 </div>
 
-                <div className={`module-header__logo-link ${state ? 'is-active' : ''}`}>
+                <div className={`module-header__logo-link ${Boolean(state) ? 'is-active' : ''}`}>
                     <button ap-click-area="스토어_공통" ap-click-name="스토어_공통_Header" ap-click-data="몰 이동 열기 버튼">
                         <i className="atom-icon ic_angle_down_circle_fill_s24">열기/닫기</i>
                     </button>
@@ -77,7 +77,7 @@ export function Header({state, hide}) {
                 </h2>
                 <p className="module-header__desc--default">내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!</p>
             </div>
-            <div id="aniHeader" className={`module-header-layer module-header--ani is-clear ${hide ? 'is-hide' : ''}`}>
+            <div id="aniHeader" className={`module-header-layer module-header--ani is-clear ${Boolean(hide) ? 'is-hide' : ''}`}>
                 <h1 className="module-header__title--ani">아모레성수</h1>
                 <div className="module-header__util">
                     <a href="" className="module-header__btn module-header__btn--user" ap-click-area="공통" ap-click-name="스토어_공통_Header" ap-click-data="마이페이지 버튼">마이</a>
