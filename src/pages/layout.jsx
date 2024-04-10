@@ -168,12 +168,16 @@ export default function Layout() {
     const [tab, setTab] = useState({
         tabData: 'home',
     });
+    const [modal, setModal] = useState(false);
     const targetHeader = 644;
 
     const onChangeTab = ({tab}) => {
         setTab({
             tabData : tab
         })
+    }
+    const onToggleModal = (state) => {
+        setModal(state)
     }
 
     useEffect(() => {
@@ -275,6 +279,26 @@ export default function Layout() {
             </div>
 
             <div className="wrap__item">
+                <h1 className="title">모듈 팝업 - 공유</h1>
+                <div className="description">
+                    
+                </div>
+                <div className="example-area">
+                    <button
+                        className="btnCategory"
+                        ap-click-area="스토어_매장 홈"
+                        ap-click-name="스토어_매장홈_퀵아이콘"
+                        ap-click-data="공유버튼"
+                        onClick={()=> onToggleModal(true)}
+                    >
+                        <span className="ico">
+                            <img src="https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_share_s51_3a416f.svg" />
+                        </span><span className="text">공유</span>
+                    </button>
+                </div>
+            </div>
+
+            <div className="wrap__item">
                 <h1 className="title">tabWrap - tabs(sticky)</h1>
                 <div className="description">
                     
@@ -300,18 +324,42 @@ export default function Layout() {
                 </div>
                 <div className="example-area">
                     <footer className='module-footer'>
-                        <section class="module-footer__inner">
-                            <ul class="module-footer__links--large">
+                        <section className="module-footer__inner">
+                            <ul className="module-footer__links--large">
                                 <li><a href="#none" ap-click-area="스토어_공통" ap-click-name="스토어_공통_Footer" ap-click-data="로그인 버튼">로그인</a></li>
                                 <li><a href="https://www.amoremall.com/kr/ko/beautypoint/app/footer/agreement.do" target="_blank" rel="opener noreferrer" ap-click-area="스토어_공통" ap-click-name="스토어_공통_Footer" ap-click-data="이용약관 버튼">이용약관</a></li><li><a href="https://www.amoremall.com/kr/ko/beautypoint/app/footer/privacy.do" target="_blank" rel="opener noreferrer" ap-click-area="스토어_공통" ap-click-name="스토어_공통_Footer" ap-click-data="개인정보처리방침 버튼">개인정보처리방침</a></li>
                             </ul>
-                            <div class="module-footer__copyright">
-                                <div class="module-footer__copyright-txt">© AMOREPACIFIC CORPORATION. ALL RIGHTS RESERVED</div>
+                            <div className="module-footer__copyright">
+                                <div className="module-footer__copyright-txt">© AMOREPACIFIC CORPORATION. ALL RIGHTS RESERVED</div>
                             </div>
                         </section>
                     </footer>
                 </div>
             </div>
+
+            {/* open */}
+            <section className={`modalPopupWrap ${Boolean(modal) ? 'open' : ''}`}>
+                <div className="popupBg" ap-click-area="스토어_매장 홈" ap-click-name="스토어_매장 홈_[팝업]매장 공유_닫기 버튼"></div>
+                <div className="popupWrap anchorBottom">
+                    <div className="popupcontainerBox">
+                        <div className="popupInner">
+                            <button className="btnIr btnLayerHandler">레이어 끌기 버튼</button>
+                            <div className="popupHead"><h2 className="tit">공유</h2></div>
+                            <div className="popupContents">
+                                <ul className="shareSelect">
+                                    <li>
+                                        <button className="btnIr facebook" ap-click-area="스토어_매장 홈" ap-click-name="스토어_매장 홈_[팝업]매장 공유_페이스북 버튼">페이스북</button><p className="txt">페이스북</p>
+                                    </li>
+                                    <li>
+                                        <button className="btnIr url" ap-click-area="스토어_매장 홈" ap-click-name="스토어_매장 홈_[팝업]매장 공유_URL 복사 버튼">url복사</button><p className="txt">URL 복사</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button className="btnIr popupClose btnCloseLayer" onClick={()=> onToggleModal(false)} ap-click-area="스토어_매장 홈" ap-click-name="스토어_매장 홈_[팝업]매장 공유_닫기 버튼">레이어 닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
            
             

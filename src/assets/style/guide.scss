@@ -516,6 +516,10 @@ table td {
     line-height: 14px;
 }
 .o2o-skin {
+    .btnCategory .text {
+        font-size: 12px;
+        color: #333;
+    }
     .tabs .tab {
         position: relative;
         flex: inherit;
@@ -588,6 +592,9 @@ table td {
     .module-footer__copyright {
         font-size: 12px;
         text-align: center;
+    }
+    .popupWrap.anchorBottom .popupcontainerBox .popupInner .popupContents {
+        padding-bottom: inherit;
     }
 }
 /* tabWrap 스타일 - 끝 */
@@ -855,3 +862,248 @@ table td {
 }
 
 /* tabPanel 스타일 - 끝 */
+
+/* 공유 버튼 스타일 */
+.btnCategory {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 400;
+    color: #888;
+    text-align: center;
+}
+
+/* modalPopup 스타일 - 시작 */
+.btnIr {
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    font-size: 0;
+    text-indent: -9999px;
+    
+    &.facebook, 
+    &.facebook:after {
+        width: 60px;
+        height: 60px;
+    }
+    &.faceBook {
+        width: 60px;
+        height: 60px;
+    }
+    &.facebook:after {
+        background-size: 60px 60px;
+        background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/svg/logo/logo_facebook_s60.svg);
+    }
+    &.url,
+    &.url:after {
+        width: 60px;
+        height: 60px;
+    }
+    &.url:after {
+        background-size: 60px 60px;
+        background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/mall/svg/ic/ic_link_circle_fill_s60.svg);
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        flex: 0 0 auto;
+    }
+    &.popupClose:after {
+        width: 32px;
+        height: 32px;
+        background-size: 32px 32px;
+        background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/core/svg/ic/ic_close_s32_040405.svg);
+    }
+}
+.popupBg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    z-index: 1050;
+}
+.popupWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 964px;
+    width: -webkit-calc(100% - 60px);
+    width: -moz-calc(100% - 60px);
+    width: calc(100% - 60px);
+    z-index: 1055;
+}
+.popupHead {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+
+    .tit {
+        line-height: 24px;
+        font-weight: 700;
+    }
+    &+ .popupContents {
+        min-height: 0;
+    }
+}
+.popupContents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    min-height: 78px;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+    padding-bottom: 35px;
+    text-align: center;
+}
+.popupcontainerBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 580px;
+    padding: 35px 20px 20px;
+    border-radius: 8px;
+    background: #fff;
+}
+[class*=anchor] .popupcontainerBox {
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    right: auto;
+    width: 100%;
+    max-height: -webkit-calc(100% - 115px);
+    max-height: -moz-calc(100% - 115px);
+    max-height: calc(100% - 115px);
+    padding: 0;
+    border-radius: 8px 8px 0 0;
+}
+[class*=anchor] .btnLayerHandler {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 8px 8px 0 0;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+        width: 61px;
+        height: 5px;
+        background-color: #efefef;
+        border-radius: 3px;
+    }
+}
+[class*=anchor] .popupHead {
+    flex: 0 0 auto;
+    margin-bottom: 0;
+    padding: 35px 20px 30px;
+
+    &+.popupContents:last-of-type {
+        padding-top: 0;
+    }
+}
+
+[class*=anchor] .popupClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+}
+
+[class*=anchor] .popupContents {
+    display: block;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 35px 20px 20px;
+    text-align: left;
+}
+.shareSelect {
+    display: flex;
+    grid-template-columns: none;
+    justify-content: space-around;
+    padding: 10px 20px 28px;
+
+    li {
+        text-align: center;
+    }
+    .txt {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: inherit;
+        color: #888;
+    }
+}
+.anchorBottom .popupcontainerBox {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    max-height: -webkit-calc(100% - 115px);
+    max-height: -moz-calc(100% - 115px);
+    max-height: calc(100% - 115px);
+    background-color: transparent;
+}
+.anchorBottom .popupClose {
+    right: 12px;
+    top: 32px;
+}
+.popupInner {
+    position: relative;
+    margin: 0 auto;
+    max-width: 640px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.modalPopupWrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+
+        .popupBg {
+            opacity: 1;
+        }
+    }
+}
+/* modalPopup 스타일 - 끝 */
