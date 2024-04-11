@@ -88,6 +88,19 @@ export function Basic() {
                         <CopyBlock text={metaTag} language='js' theme={a11yDark} />
                     </div>
                 </div>
+                <div className="wrap__item">
+                    <h2 className="title">package</h2>
+                    <div className="description">사용한 패키지입니다.</div>
+                    <div className="example-area">
+                        <CopyBlock text={`
+"react": "^18.2.0",
+"node-sass": "^7.0.3",
+"react-router-dom": "^6.22.3",
+"swiper": "^11.1.0",
+
+                        `} language='js' theme={a11yDark} />
+                    </div>
+                </div>
             </div>
 
         </div>

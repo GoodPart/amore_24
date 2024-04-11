@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/component";
+import Component from "./pages/component";
 import { StyleGuide } from "./pages/style";
 import { Name } from "./pages/name";
 import Gnb from "./navigate";
@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Gnb />
         <Routes>
-          <Route path="/" exact element={<Layout />} />
+          <Route path="/" exact element={<Component />} />
           <Route path="/style" element={<StyleGuide />} />
           <Route path="/basic" element={<Basic />} />
           <Route path="/rull_name" element={<Name />} />

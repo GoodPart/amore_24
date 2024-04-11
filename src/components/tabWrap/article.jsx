@@ -86,7 +86,7 @@ export function StoreInfo({ data }) {
                 </li>
 
             </ul>
-            <div>카카오맵</div>
+            <div style={{padding : 24}}>(카카오맵 영역)</div>
         </>
     )
 }
@@ -106,16 +106,6 @@ export function IntroduceInfo({ data }) {
                 </a>
             </p>
             <ButtonLink txt={'아모레성수'}/>
-            {/* <button
-                className="btnRound"
-                ap-click-area="스토어_매장 홈"
-                ap-click-name="스토어_매장 홈_매장 소개_자세히 보기 버튼"
-                ap-click-data="">
-                <span className="text">
-                    <em>아모레성수</em> <span>자세히 보기</span>
-                </span>
-                <span className="icon ic_more_8x20"></span>
-            </button> */}
         </>
     )
 }
@@ -139,9 +129,9 @@ export function ReserveService({ data }) {
                                             </picture>
                                         </div>
                                         <div className="card-contents">
-                                            <p class="tit">{ele.title}</p>
-                                            <p class="desc">{ele.desc}</p>
-                                            <span class="time"><i class="icon ic_time_20"></i><p><span class="numBold">{ele.time}</span>분</p></span>
+                                            <p className="tit">{ele.title}</p>
+                                            <p className="desc">{ele.desc}</p>
+                                            <span className="time"><i className="icon ic_time_20"></i><p><span className="numBold">{ele.time}</span>분</p></span>
                                         </div>
                                     </div>
                                 </a>

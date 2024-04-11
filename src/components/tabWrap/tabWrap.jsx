@@ -12,16 +12,14 @@ export function TabWrap({ data, tab, onChange }) {
                 })
             }
             </div>
-            <span>{tab.tabData}영역</span>
-            <span>탭에 따라 하단 tabPanel이 변경됩니다.</span>
-            {/* <TabPanel data={filterData} tab={tab.tabData} /> */}
+            <TabPanel data={result} tab={tab.tabData} />
             
         </div>
     )
 }
 
 export function TabPanel({ data, tab }) {
-    const filterData = Object.values(data).filter(ele => ele.queryPath === tab.tabData)[0];
+    const filterData = data.filter(ele => ele.queryPath === tab)[0];
     const dataOfsortByOrder = filterData.articles ? filterData.articles.sort((a, b) => a.order - b.order) : undefined;
     return (
         <section className="tabPanel">

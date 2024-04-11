@@ -1,12 +1,12 @@
 export function Name() {
     return (
         <div>
-            <h1>퍼블리싱 규칙</h1>
-            <h2>네임규칙</h2>
+            <h1 className="title">퍼블리싱 규칙</h1>
+            <h2 className="title">네임규칙</h2>
 
             <div className="rull_area">
                 <div className="rull_area__item">
-                    <h3>표기법</h3>
+                    <h3 className="title">표기법</h3>
                     <div className="rull_area__content">
                         <div className="sub-desc">
                             ID는 개발을 위해서만 사용하고, input뒤 라벨등의 바인드를 제외하곤 사용하지 않는다.<br />
@@ -37,7 +37,7 @@ export function Name() {
                 </div>
 
                 <div className="rull_area__item">
-                    <h3>예약어</h3>
+                    <h3 className="title">예약어</h3>
                     <div className="rull_area__content">
                         <table>
                             <caption>예약어의 예시</caption>
@@ -129,7 +129,7 @@ export function Name() {
                 </div>
 
                 <div className="rull_area__item">
-                    <h3>이미지 네이밍 규칙</h3>
+                    <h3 className="title">이미지 네이밍 규칙</h3>
                     <div className="rull_area__content">
                         <table>
                             <caption>이미지 네이밍 규칙 예</caption>
