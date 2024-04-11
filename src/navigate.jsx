@@ -3,7 +3,10 @@ export default function Gnb() {
     return (
         <ul>
             <li>
-                <Link to={'/'}>레이아웃</Link>
+                <Link to={'/'}>컴포넌트</Link>
+            </li>
+            <li>
+                <Link to={'/basic'}>기본</Link>
             </li>
             <li>
                 <Link to={'/style'}>스타일</Link>

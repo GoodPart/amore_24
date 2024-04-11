@@ -4,7 +4,7 @@ const mapInfo = {
     title: "아모레성수",
     desc : "내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!"
 }
-const linkList = [
+export const linkList = [
     {
         active : false,
         title: "아모레 몰",
@@ -21,7 +21,6 @@ const linkList = [
         apClickData: "아모레 스토어 버튼",
         icon: "ic_gnb_logo_amore_store_64"
     },
-
 ]
 
 export function ModuleLinkPopup({data}) {

@@ -40,7 +40,6 @@ export function Detail({ articleData }) {
     const result = Object.values(articleData);
     return (
         <div className="prdDetail">
-            <div className={`article recommendArea`}>스와이퍼</div>
             {
                 result.map((ele, index) => {
                     return <ArticleWrap key={index} data={ele} />

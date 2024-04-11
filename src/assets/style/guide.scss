@@ -1,6 +1,35 @@
 .wrap {
-    margin: 0 auto;
-    width: 1024px;
+    display: flex;
+    // margin: 0 auto;
+    // max-width: 900px;
+    width: 100%;
+
+
+    // navigation
+    > ul {
+        overflow-y: auto;
+        position: sticky;
+        top: 0;
+        left: 0;
+        // overflow-y: auto;
+        margin : 0 24px;
+        background-color: #efefef;
+        width: 270px;
+        height: 100vh;
+
+        li {
+            padding: 12px 24px;
+
+            &:first-child {
+                margin-top: 60px;
+            }
+        }
+    }
+    > ul + div {
+        padding: 90px 0;
+        width: calc(100% - 270px);
+    }
+
 }
 
 .wrap__container {
@@ -9,24 +38,58 @@
     gap: 60px;
 }
 
+.wrap__item {
+    padding: 12px 0;
+    border-top: 1px dashed #ccc;
+    .example-area {
+        // width: 600px;
+        max-width: 1200px;
+    }
+}
 .example-area {
+    margin-top: 24px;
     display: flex;
     flex-direction: column;
-    width: 640px;
+
+    &--min {
+        width: 640px;
+    }
 
     &--row {
         flex-direction: inherit;
         gap: 12px;
     }
-}
 
+    h1, h2 {
+        display: inherit;
+        position: inherit;
+
+        &:before {
+            margin-right: 0;
+            width: 0;
+        }
+    }
+}
+.code-area {
+    max-width: 1200px;
+    >div {
+        padding: 12px;
+    }
+}
+.type-area {
+    border-top: 1px solid #000;
+    margin-top: 24px;
+    max-width: 1200px;
+}
 .guide__title {
     font-size: 24px;
     font-weight: 700;
 }
 .description {
-    width: 640px;
+    // width: 640px;
     // padding: 20px;
+
+    
 }
 
 /* 전면 스와이프 스타일 - 시작 */
@@ -178,17 +241,43 @@
 
 /* 룰 스타일 - 시작 */
 h1.title {
-    font-size: 26px;
+    position: relative;
+    display: flex;
+    font-size: 48px;
     font-weight: bold;
-}
-h1.title + .description {
-    margin-top: 8px;
-    font-size: 16px;
-    color: #777;
+    margin-bottom: 36px;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 4px;
+        width: 6px;
+        height: auto;
+        background-color:rgb(186, 59, 59);
+    }
 }
 h2 {
+    position: relative;
+    display: flex;
     font-size: 24px;
     font-weight: 400;
+    font-weight: 700;
+    &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 4px;
+        width: 6px;
+        height: auto;
+        background-color:rgb(186, 131, 59);
+    }
+
+    & + .description {
+        font-weight: 500;
+        margin-top: 8px;
+        font-size: 16px;
+        color: #666;
+        line-height: 21px;
+    }
 }
 h3 {
     font-size: 16px;
