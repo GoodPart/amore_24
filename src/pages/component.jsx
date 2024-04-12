@@ -27,7 +27,7 @@ import Footer from '../components/footer';
 
 
 
-export default function Component() {
+export default function Component({title}) {
     const [hide, setHide] = useState(true); /* 헤더 몰 이동 상태 값 */
     const [tab, setTab] = useState({
         tabData: 'home',
@@ -49,6 +49,7 @@ export default function Component() {
     }
 
     useEffect(() => {
+        document.title = `AMORESTORE | ${title}`
         window.addEventListener('scroll', handleScroll);
         
         return () => {

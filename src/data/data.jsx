@@ -121,6 +121,8 @@ import 'swiper/css/navigation';
     modules={[Navigation, Autoplay, Pagination]} // 스와이프에 모듈을 추가합니다.
 >
 {...} // SwiperSlide 영역
+<div className="swiper-next"><i className="atom-icon ic_angle_flicking_right_s35">다음</i></div>
+<div className="swiper-prev"><i className="atom-icon ic_angle_flicking_left_s35">이전</i></div>
 </Swiper>
 `
 export const codeSwiperSlide = `<SwiperSlide>

@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import { CopyBlock, nord, a11yDark } from 'react-code-blocks';
 
 
@@ -61,7 +61,11 @@ const metaTag = `
 <meta property="og:locale" content="ko_KR">
 `
 
-export function Basic() {
+export function Basic({title}) {
+
+    useEffect(() => {
+        document.title = `AMORESTORE | ${title}`
+    }, [])
     return (
         <div>
             <div className="wrap__container">

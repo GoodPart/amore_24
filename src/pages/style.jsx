@@ -1,5 +1,5 @@
 import { CodeBlock, a11yDark } from 'react-code-blocks'
-
+import { useEffect } from 'react'
 const colorList = [
     {
         name : "$black",
@@ -54,8 +54,11 @@ const colorList = [
         path : "#ff5a5a"
     },
 ]
-export function StyleGuide() {
+export function StyleGuide({title}) {
+    useEffect(() => {
+        document.title = `AMORESTORE | ${title}`
 
+    }, [])
     return (
         <div>
             <div className="wrap__container">

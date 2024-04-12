@@ -1,6 +1,10 @@
-
-export function Name() {
+import { useEffect } from "react"
+export function Name({title}) {
     
+    useEffect(() => {
+        document.title = `AMORESTORE | ${title}`
+
+    }, [])
     return (
         <div>
 
@@ -14,7 +18,7 @@ export function Name() {
 
                     <div className="rull_area__content">
                         <h3 className="title">예시</h3>
-                        <table>
+                        <table className="table--mid">
                             <caption>공통 네이밍 규칙 예</caption>
                             <colgroup>
                                 <col width="20%" />
@@ -47,12 +51,12 @@ export function Name() {
                     <h2 className="title">예약어</h2>
                     <div className="rull_area__content">
                         <h3 className="title">예시</h3>
-                        <table>
+                        <table className="table--xLage">
                             <caption>예약어의 예시</caption>
                             <colgroup>
                                 <col width="10%" />
                                 <col width="10%" />
-                                <col width="50%" />
+                                <col width="55%" />
 
                                 <col />
                             </colgroup>
@@ -148,11 +152,11 @@ export function Name() {
                     <div className="rull_area__content">
                         <h3 className="title">예시</h3>
 
-                        <table>
+                        <table className="table--lage">
                             <caption>이미지 네이밍 규칙 예</caption>
                             <colgroup>
                                 <col width="20%" />
-                                <col width="20%" />
+                                <col width="40%" />
                             </colgroup>
                             <thead>
                                 <tr>

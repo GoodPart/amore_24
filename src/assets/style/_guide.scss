@@ -299,7 +299,7 @@ h2.title {
 h3.title {
     position: relative;
     display: flex;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 12px;
 
@@ -338,6 +338,16 @@ table {
     border-collapse: collapse;
     border-bottom: 1px solid $black_333 !important;
     border-top: 1px solid $black_333;
+
+    &.table--mid {
+        width: 40%;
+    }
+    &.table--lage {
+        width: 60%;
+    }
+    &.table--xLage {
+        width: 80%;
+    }
 
 }
 caption {
@@ -682,6 +692,10 @@ table td {
         padding: 0;
         color: $black_333;
         margin-left: 20px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
     }
     .tabs .tab .inner{
         min-width: inherit;

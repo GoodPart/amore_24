@@ -12,10 +12,10 @@ function App() {
       <BrowserRouter>
         <Gnb />
         <Routes>
-          <Route path="/" element={<Basic />} />
-          <Route path="/rull_name" element={<Name />} />
-          <Route path="/style" element={<StyleGuide />} />
-          <Route path="/component" exact element={<Component />} />
+          <Route path="/" element={<Basic title="기본" />} />
+          <Route path="/rull_name" element={<Name title="이름규칙" />} />
+          <Route path="/style" element={<StyleGuide title="스타일" />} />
+          <Route path="/component" exact element={<Component title="컴포넌트" />} />
         </Routes>
       </BrowserRouter>
     </div>
