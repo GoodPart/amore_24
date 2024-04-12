@@ -20,7 +20,7 @@ const vhIssue = `
 // React 및 Next의 경우, App영역에 삽입
 function vhSafety() {
     let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", vh+'px'); // \${vh}px로 작성해도 무관
+    document.documentElement.style.setProperty("--vh", $\{vh}px); 
 };
 useEffect(() => {
     setScreenSize();
@@ -64,8 +64,8 @@ const metaTag = `
 export function Basic() {
     return (
         <div>
-            <h1 className='title'>기본환경</h1>
             <div className="wrap__container">
+            <h1 className='title'>기본환경</h1>
                 <div className="wrap__item">
                     <h2 className="title">Html 태그</h2>
                     <div className="description">html 및 head영역에 대한 기본 사항입니다.</div>
@@ -90,7 +90,7 @@ export function Basic() {
                 </div>
                 <div className="wrap__item">
                     <h2 className="title">package</h2>
-                    <div className="description">사용한 패키지입니다.</div>
+                    <div className="description">사용한 패키지 및 버전</div>
                     <div className="example-area">
                         <CopyBlock text={`
 "react": "^18.2.0",
@@ -98,7 +98,7 @@ export function Basic() {
 "react-router-dom": "^6.22.3",
 "swiper": "^11.1.0",
 
-                        `} language='js' theme={a11yDark} />
+`} language='js' theme={a11yDark} />
                     </div>
                 </div>
             </div>

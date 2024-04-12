@@ -34,12 +34,12 @@
 .wrap__container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 100px;
 }
 
 .wrap__item {
-    padding: 48px 0 12px;
-    border-top: 1px dashed #ccc;
+    // padding: 24px 0;
+    // border-top: 2px dashed #ccc;
     .example-area {
         max-width: 1200px;
 
@@ -51,7 +51,7 @@
     }
 }
 .example-area {
-    margin-top: 24px;
+    margin-top: 36px;
     display: flex;
     flex-direction: column;
 
@@ -75,7 +75,7 @@
     }
 }
 .code-area {
-    margin-top: 12px;
+    margin-top: 36px;
     max-width: 1200px;
     >div {
         padding: 12px;
@@ -83,7 +83,7 @@
 }
 .type-area {
     // border-top: 1px solid $black;
-    margin-top: 24px;
+    margin-top: 36px;
     max-width: 1200px;
 }
 .guide__title {
@@ -245,10 +245,22 @@
 /* 전면 스와이프 스타일 - 끝 */
 
 /* 룰 스타일 - 시작 */
+.gnb {
+    font-size: 16px;
+    font-weight: 700;
+
+    li:hover {
+        text-decoration: underline;
+    }
+
+    li a.on {
+        color: $linkthumbnailPoint;
+    }
+}
 h1.title {
     position: relative;
     display: flex;
-    font-size: 48px;
+    font-size: 60px;
     font-weight: bold;
     margin-bottom: 36px;
 
@@ -256,15 +268,15 @@ h1.title {
         content: '';
         display: inline-block;
         margin-right: 4px;
-        width: 6px;
+        width: 12px;
         height: auto;
-        background-color:rgb(186, 59, 59);
+        background-color:$h1--title;
     }
 }
 h2.title {
     position: relative;
     display: flex;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
     font-weight: 700;
     &:before {
@@ -273,14 +285,14 @@ h2.title {
         margin-right: 4px;
         width: 6px;
         height: auto;
-        background-color:rgb(186, 131, 59);
+        background-color:$h2--title
     }
 
     & + .description {
-        font-weight: 500;
+        font-weight: 400;
         margin-top: 8px;
         font-size: 16px;
-        color: #666;
+        color: $black_333;
         line-height: 21px;
     }
 }
@@ -297,10 +309,26 @@ h3.title {
         margin-right: 4px;
         width: 6px;
         height: auto;
-        background-color:rgb(93, 134, 114);
+        background-color:$h3--title
     }
     
 }
+
+/* rull */
+.rull_area {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    
+    .rull_area__item {
+        padding: 48px 0;
+        // border-top: 1px dashed #ccc;
+    }
+    .rull_area__content {
+        margin-top: 24px;
+    }
+}
+/* rull */
 
 //table
 table {
@@ -308,7 +336,7 @@ table {
     table-layout: fixed;
     border-spacing: 0;
     border-collapse: collapse;
-    border-bottom: 1px solid $black_333;
+    border-bottom: 1px solid $black_333 !important;
     border-top: 1px solid $black_333;
 
 }
@@ -329,7 +357,7 @@ table th {
     text-align: center;
     font-weight: 400;
     word-break: keep-all;
-    border-bottom: 1px solid #666;
+    // border-bottom: 1px solid #666;
     background-color: $black_333;
     color: $white;
     font-weight: 700;

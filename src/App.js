@@ -12,10 +12,10 @@ function App() {
       <BrowserRouter>
         <Gnb />
         <Routes>
-          <Route path="/" exact element={<Component />} />
-          <Route path="/style" element={<StyleGuide />} />
-          <Route path="/basic" element={<Basic />} />
+          <Route path="/" element={<Basic />} />
           <Route path="/rull_name" element={<Name />} />
+          <Route path="/style" element={<StyleGuide />} />
+          <Route path="/component" exact element={<Component />} />
         </Routes>
       </BrowserRouter>
     </div>

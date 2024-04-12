@@ -25,8 +25,8 @@ export function ButtonLink({txt }) {
     return (
         <button
                 className="btnRound"
-                ap-click-area="스토어_매장 홈"
-                ap-click-name="스토어_매장 홈_매장 소개_자세히 보기 버튼"
+                ap-click-area="스토어_매장 홈" // 필요 데이터 삽입 필요
+                ap-click-name="스토어_매장 홈_매장 소개_자세히 보기 버튼" // 필요 데이터 삽입 필요
                 ap-click-data="">
                 <span className="text">
                     <em>{txt}</em> <span>자세히 보기</span>
@@ -113,7 +113,6 @@ export function IntroduceInfo({ data }) {
 
 export function ReserveService({ data }) {
     const getBody = data.body;
-    console.log(getBody)
     return (
         <>
             <ul className="listArea serviceInfo">

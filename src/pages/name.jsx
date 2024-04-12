@@ -1,18 +1,25 @@
+
 export function Name() {
+    
     return (
         <div>
-            <h1 className="title">퍼블리싱 규칙</h1>
-            <h2 className="title">네임규칙</h2>
 
             <div className="rull_area">
+            <h1 className="title">퍼블리싱 규칙</h1>
                 <div className="rull_area__item">
-                    <h3 className="title">표기법</h3>
+                    <h2 className="title">네임규칙</h2>
+                    <div className="description">
+                        ID는 개발을 위해서만 사용하고, input뒤 라벨등의 바인드를 제외하곤 사용하지 않는다.<br />
+                    </div>
+
                     <div className="rull_area__content">
-                        <div className="sub-desc">
-                            ID는 개발을 위해서만 사용하고, input뒤 라벨등의 바인드를 제외하곤 사용하지 않는다.<br />
-                        </div>
+                        <h3 className="title">예시</h3>
                         <table>
                             <caption>공통 네이밍 규칙 예</caption>
+                            <colgroup>
+                                <col width="20%" />
+                                <col width="20%" />
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th>종류</th>
@@ -37,10 +44,18 @@ export function Name() {
                 </div>
 
                 <div className="rull_area__item">
-                    <h3 className="title">예약어</h3>
+                    <h2 className="title">예약어</h2>
                     <div className="rull_area__content">
+                        <h3 className="title">예시</h3>
                         <table>
                             <caption>예약어의 예시</caption>
+                            <colgroup>
+                                <col width="10%" />
+                                <col width="10%" />
+                                <col width="50%" />
+
+                                <col />
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th>종류</th>
@@ -129,10 +144,16 @@ export function Name() {
                 </div>
 
                 <div className="rull_area__item">
-                    <h3 className="title">이미지 네이밍 규칙</h3>
+                    <h2 className="title">이미지 네이밍 규칙</h2>
                     <div className="rull_area__content">
+                        <h3 className="title">예시</h3>
+
                         <table>
                             <caption>이미지 네이밍 규칙 예</caption>
+                            <colgroup>
+                                <col width="20%" />
+                                <col width="20%" />
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th>분류</th>
@@ -144,7 +165,7 @@ export function Name() {
                                 <tr>
                                     <td className="align-l">아이콘</td>
                                     <td className="align-l">아이콘은 '_'(언더스코어)를 사용하여 생성한다.</td>
-                                    <td className="align-l">errorMesage, controlCenter, controlCenter2</td>
+                                    <td className="align-l">ic_store_20</td>
                                 </tr>
                             </tbody>
                         </table>

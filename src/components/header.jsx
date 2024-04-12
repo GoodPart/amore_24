@@ -1,28 +1,10 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect } from "react";
+import { mapInfo, linkList } from "../data/data";
 
-const mapInfo = {
-    title: "아모레성수",
-    desc : "내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!"
-}
-export const linkList = [
-    {
-        active : false,
-        title: "아모레 몰",
-        apClickArea: "스토어_공통",
-        apClickName: "스토어_공통_Header_[팝업] 몰 이동 레이어",
-        apClickData: "아모레 몰 버튼",
-        icon: "ic_gnb_logo_amore_96"
-    },
-    {
-        active : true,
-        title: "아모레 스토어",
-        apClickArea: "스토어_공통",
-        apClickName: "스토어_공통_Header_[팝업] 몰 이동 레이어",
-        apClickData: "아모레 스토어 버튼",
-        icon: "ic_gnb_logo_amore_store_64"
-    },
-]
 
+
+
+/* 드롭다운 메뉴 영역 */
 export function ModuleLinkPopup({data}) {
 
     const result = Object.values(data).map((ele, index) => {
@@ -43,10 +25,18 @@ export function ModuleLinkPopup({data}) {
         </ul>
     )
 }
+/* 드롭다운 메뉴 영역 */
 
-export function Header({state, hide}) {
-
+export function Header({ state, hide, gRef }) {
+    const headerRef = useRef(null);
     
+    useEffect(() => {
+
+        if (gRef != undefined) {
+            gRef(headerRef.current.offsetTop)
+        }
+
+    }, [])
 
     return (
         <header className="module-header is-scroll">
@@ -58,7 +48,7 @@ export function Header({state, hide}) {
                     </a>
                 </div>
 
-                <div className={`module-header__logo-link ${Boolean(state) ? 'is-active' : ''}`}>
+                <div className={`module-header__logo-link ${Boolean(state) ? 'is-active' : ''}`} >
                     <button ap-click-area="스토어_공통" ap-click-name="스토어_공통_Header" ap-click-data="몰 이동 열기 버튼">
                         <i className="atom-icon ic_angle_down_circle_fill_s24">열기/닫기</i>
                     </button>
@@ -67,14 +57,12 @@ export function Header({state, hide}) {
                 <div className="module-header__util">
                     <a href="" className="module-header__btn module-header__btn--user" ap-click-area="공통" ap-click-name="스토어_공통_Header" ap-click-data="마이페이지 버튼">마이</a>
                 </div>
-
-
             </div>
-            <div id="headerSection" className="module-header--default">
+            <div id="headerSection" className="module-header--default" ref={headerRef}>
                 <h2 className="module-header__logo--default">
-                    <a href="#" ap-click-area="스토어_공통" ap-click-name="스토어_공통_Header" ap-click-data="매장명 버튼">아모레성수</a>
+                    <a href="#" ap-click-area="스토어_공통" ap-click-name="스토어_공통_Header" ap-click-data="매장명 버튼">{mapInfo.title}</a>
                 </h2>
-                <p className="module-header__desc--default">내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!</p>
+                <p className="module-header__desc--default">{mapInfo.desc}</p>
             </div>
             <div id="aniHeader" className={`module-header-layer module-header--ani is-clear ${Boolean(hide) ? 'is-hide' : ''}`}>
                 <h1 className="module-header__title--ani">아모레성수</h1>
@@ -85,8 +73,3 @@ export function Header({state, hide}) {
         </header>
     )
 }
-
-export const headerCode = `<header className="module-header">
-    헤더 코드입니다.
-</header>
-`
