@@ -2,7 +2,7 @@ import { useEffect } from "react"
 export function Name({title}) {
     
     useEffect(() => {
-        document.title = `AMORESTORE | ${title}`
+        document.title = `AMORESTORE 가이드 | ${title}`
 
     }, [])
     return (
@@ -18,7 +18,7 @@ export function Name({title}) {
 
                     <div className="rull_area__content">
                         <h3 className="title">예시</h3>
-                        <table className="table--mid">
+                        <table className="table--lage">
                             <caption>공통 네이밍 규칙 예</caption>
                             <colgroup>
                                 <col width="20%" />
@@ -155,8 +155,8 @@ export function Name({title}) {
                         <table className="table--lage">
                             <caption>이미지 네이밍 규칙 예</caption>
                             <colgroup>
-                                <col width="20%" />
-                                <col width="40%" />
+                                <col width="10%" />
+                                <col width="50%" />
                             </colgroup>
                             <thead>
                                 <tr>

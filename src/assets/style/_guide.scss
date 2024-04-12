@@ -267,7 +267,7 @@ h1.title {
     &:before {
         content: '';
         display: inline-block;
-        margin-right: 4px;
+        margin-right: 8px;
         width: 12px;
         height: auto;
         background-color:$h1--title;
@@ -282,7 +282,7 @@ h2.title {
     &:before {
         content: '';
         display: inline-block;
-        margin-right: 4px;
+        margin-right: 8px;
         width: 6px;
         height: auto;
         background-color:$h2--title
@@ -306,7 +306,7 @@ h3.title {
     &:before {
         content: '';
         display: inline-block;
-        margin-right: 4px;
+        margin-right: 8px;
         width: 6px;
         height: auto;
         background-color:$h3--title

@@ -64,7 +64,7 @@ const metaTag = `
 export function Basic({title}) {
 
     useEffect(() => {
-        document.title = `AMORESTORE | ${title}`
+        document.title = `AMORESTORE 가이드 | ${title}`
     }, [])
     return (
         <div>

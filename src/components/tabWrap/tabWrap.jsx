@@ -28,7 +28,7 @@ export function TabPanel({ data, tab }) {
                 dataOfsortByOrder != undefined ? 
                     <Detail articleData={dataOfsortByOrder} />
                     :
-                    <div>not data</div>
+                    <div style={{height : 500}}>not data</div>
             }
         </section>
     )

@@ -49,7 +49,7 @@ export default function Component({title}) {
     }
 
     useEffect(() => {
-        document.title = `AMORESTORE | ${title}`
+        document.title = `AMORESTORE 가이드 | ${title}`
         window.addEventListener('scroll', handleScroll);
         
         return () => {
@@ -96,7 +96,7 @@ export default function Component({title}) {
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
 
-                    <table>
+                    <table className='table--mid'>
                         <caption>상태 값</caption>
                         <thead>
                             <tr>
@@ -134,7 +134,7 @@ export default function Component({title}) {
                 </div>
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table>
+                    <table className='table--xLage'>
                         <caption>상태 값</caption>
                         <colgroup>
                             <col width="20%"  />
@@ -235,7 +235,7 @@ export default function Component({title}) {
                 </div>
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table>
+                    <table className='table--xLage'>
                         <caption>상태 값</caption>
                         <colgroup>
                             <col width="20%" />
@@ -397,10 +397,10 @@ export default function Component({title}) {
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
 
-                    <table>
+                    <table className='table--xLage'>
                         <colgroup>
                             <col width="20%" />
-                            <col width="20%" />
+                            <col width="10%" />
                             <col />
                         </colgroup>
                         <caption>상태 값</caption>
@@ -477,10 +477,10 @@ export default function Component({title}) {
 
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table>
+                    <table className='table--xLage'>
                         <caption>상태 값</caption>
                         <colgroup>
-                            <col width="20%" />
+                            <col width="10%" />
                             <col width="20%" />
                             <col />
                         </colgroup>
@@ -525,10 +525,10 @@ export default function Component({title}) {
 
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table>
+                    <table className='table--xLage'>
                         <caption>상태 값</caption>
                         <colgroup>
-                            <col width="20%" />
+                            <col width="10%" />
                             <col width="20%" />
                             <col />
                         </colgroup>
@@ -576,7 +576,7 @@ export default function Component({title}) {
                     <table>
                         <caption>상태 값</caption>
                         <colgroup>
-                            <col width="20%" />
+                            <col width="10%" />
                             <col width="20%" />
                             <col />
                         </colgroup>

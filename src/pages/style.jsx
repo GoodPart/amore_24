@@ -56,7 +56,7 @@ const colorList = [
 ]
 export function StyleGuide({title}) {
     useEffect(() => {
-        document.title = `AMORESTORE | ${title}`
+        document.title = `AMORESTORE 가이드 | ${title}`
 
     }, [])
     return (
