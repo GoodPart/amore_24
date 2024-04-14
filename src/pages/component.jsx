@@ -69,7 +69,7 @@ export default function Component({title}) {
         <div className="wrap__container">
             <h1 className="title"><span>컴포넌트</span></h1>
             <div className="wrap__item">
-                <h2 className="title"><span>준비</span></h2>
+                <h2 className="title"><span>준비 <a id="ready" href='#ready'>#</a></span></h2>
                 <div className="description">
                     각 컴포넌트를 선언합니다.
                 </div>
@@ -80,7 +80,7 @@ export default function Component({title}) {
             
             </div>
             <div className="wrap__item">
-                <h2 className="title"><span>Header</span></h2>
+                <h2 className="title"><span>Header <a id="Header" href='#Header'>#</a></span></h2>
                 <div className="description">
                     페이지 최상단 헤더 영역입니다.
                 </div>
@@ -118,7 +118,7 @@ export default function Component({title}) {
                 </div>
             </div>
             <div className="wrap__item">
-                <h2 className="title"><span>Header</span> - 몰 이동 열기</h2>
+                <h2 className="title"><span>Header</span> - 몰 이동 열기 <a id="Header_true" href='#Header_true'>#</a></h2>
                 <div className="description">
                     로고 우측 화살표 버튼을 클릭하면 다른 몰로 이동할 수 있는 드롭다운 메뉴가 등장합니다.<br />
                     클릭시 아이콘(화살표)는 180도 회전하며, 드롭다운 메뉴가 노출됩니다.
@@ -163,16 +163,16 @@ export default function Component({title}) {
             </div>
 
             <div className="wrap__item">
-                <h2 className="title"><span>Header</span> - 상단 고정</h2>
+                <h2 className="title"><span>Header</span> - 상단 고정 <a id="Header_fixed" href='#Header_fixed'>#</a></h2>
                 <div className="description">
                     일정 스크롤이상 이동시, 'fixed' 형태의 헤더가 노출되며 고정됩니다.<br />
                     해당 영역은 아래 'tabs'영역과 합쳐집니다.
                 </div>
                 <div className="example-area">
                     <h3 className='title'>데모</h3>
-                    <div className="o2o-skin">
+                    {/* <div className="o2o-skin"> */}
                         <Header state={false} hide={hide} gRef={getRef} />
-                    </div>
+                    {/* </div> */}
                 </div>
                 <div className="code-area">
                     <h3 className='title'>코드</h3>
@@ -181,7 +181,7 @@ export default function Component({title}) {
             </div>
 
             <div className="wrap__item">
-                <h2 className="title">swiper</h2>
+                <h2 className="title">swiper <a id="swiper" href='#swiper'>#</a></h2>
                 <div className="description">
                     스와이퍼 영역입니다.
                 </div>
@@ -298,7 +298,7 @@ export default function Component({title}) {
             </div>
 
             <div className="wrap__item">
-                <h2 className="title">SwiperSlide</h2>
+                <h2 className="title">SwiperSlide <a id="swiper_slide" href='#swiper_slide'>#</a></h2>
                 <div className="description">
                     스와이퍼 슬라이드 영역입니다. 
                 </div>
@@ -312,7 +312,7 @@ export default function Component({title}) {
             </div>
 
             <div className="wrap__item">
-                <h2 className="title">공유 버튼</h2>
+                <h2 className="title">공유 버튼 <a id="button_share" href='#button_share'>#</a></h2>
                 <div className="description">
                     '공유' 버튼 클릭시, 'modal'팝업이 노출됩니다.<br />
                     'x'버튼과 'dim'영역 클릭시 비노출 상태로 변경되며, 해당 팝업은 '끌어내리기' 기능이 필요합니다.
@@ -365,7 +365,7 @@ export default function Component({title}) {
             </div>
 
             <div className="wrap__item">
-                <h2 className="title">모달 팝업 - (공유)</h2>
+                <h2 className="title">모달 팝업 - (공유) <a id="modal_popup" href='#modal_popup'>#</a></h2>
                 <div className="description">
                     'modalPopupWrap'에 'open' 클래스를 사용해 노출 시킬 수 있다.
                 </div>
@@ -379,7 +379,7 @@ export default function Component({title}) {
 
 
             <div className="wrap__item">
-                <h2 className="title">tabWrap - tabs(sticky)</h2>
+                <h2 className="title">tabWrap - tabs <a id="Tab" href='#Tab'>#</a></h2>
                 <div className="description">
                     각 내용으로 이동할 수 있는 탭, 'sticky'영역으로 상단에 고정된 'Header' 아래 위치한다.<br />
                     구현시 스크롤 최 하단 까지 이동
@@ -460,7 +460,7 @@ export default function Component({title}) {
             </div>
         
             <div className='wrap__item'>
-                <h2 className="title">Article - 정보</h2>
+                <h2 className="title">Article - 정보 <a id="Article_info" href='#Article_info'>#</a></h2>
                 <div className="description">
                     '매장 정보' 영역
                 </div>
@@ -506,7 +506,7 @@ export default function Component({title}) {
             </div>
 
             <div className='wrap__item'>
-                <h2 className="title">Article - 소개</h2>
+                <h2 className="title">Article - 소개 <a id="Article_introduce" href='#Article_introduce'>#</a></h2>
                 <div className="description">
                 '매장 소개' 영역으로, '설명' 및 '자세히 보기' 버튼 클릭시 탭 이동
 
@@ -554,7 +554,7 @@ export default function Component({title}) {
             </div>
 
             <div className='wrap__item'>
-                <h2 className="title">Article - 예약</h2>
+                <h2 className="title">Article - 예약 <a id="Article_reserve" href='#Article_reserve'>#</a></h2>
                 <div className="description">
                     '서비스 예약' 영역으로, 각 리스트 아이템 클릭시 '상세' 및 '자세히 보기' 버튼 클릭시 탭 이동
 
@@ -602,7 +602,7 @@ export default function Component({title}) {
             </div>
 
             <div className='wrap__item'>
-                <h2 className="title">Article - Button</h2>
+                <h2 className="title">Article - Button <a id="button_detail" href='#button_detail'>#</a></h2>
                 <div className="description">
                     'Article'영역에서 사용된 공통 버튼<br />
                     클릭시 'tabs'에 각 페이지(홈, 소개, 예약, 소식)로 이동된다.
@@ -626,7 +626,7 @@ export default function Component({title}) {
             
 
             <div className="wrap__item">
-                <h2 className="title">footer</h2>
+                <h2 className="title">footer <a id="footer" href='#footer'>#</a></h2>
                 <div className="description">
                     페이지 하단 푸터<br />
                     '이용약관' 및 '개인정보처리방침'은 새창링크로 이동된다.

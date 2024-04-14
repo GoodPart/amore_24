@@ -1,3 +1,5 @@
+
+
 .wrap {
     display: flex;
     // margin: 0 auto;
@@ -11,16 +13,34 @@
         position: sticky;
         top: 0;
         left: 0;
-        background-color: #efefef;
         width: 270px;
         height: 100vh;
 
         li {
-            padding: 12px 24px;
+
+            a {
+                display: block;
+                padding: 12px 24px;
+                color: $gray_900;
+
+            }
 
             &:first-child {
                 margin-top: 60px;
             }
+
+            li a {
+                color: $gray_600;
+
+            }
+        }
+    }
+
+    > ul ul li {
+        font-weight: 400;
+
+        &:first-child {
+            margin-top: 0;
         }
     }
     > ul + div {
@@ -46,7 +66,16 @@
         .title + div {
             border: 1px dashed #ccc;
             border-radius: 4px;
+            // box-shadow: 4px 4px 8px 0px rgba(200,200,200,200.25);
+            // border-radius: 8px;
 
+        }
+        .title a:target:before {
+            content: "";
+            display: block;
+            height: 2em;
+            margin-top: 2em;
+            visibility: hidden;
         }
     }
 }
@@ -176,11 +205,6 @@
 }
 .swiper {
     &:hover {
-        // .swiper-prev,
-        // .swiper-next {
-        //     display: block;
-        // }
-
         .swiper-prev:not(.swiper-button-disabled),
         .swiper-next:not(.swiper-button-disabled){
             display: block;
@@ -248,13 +272,33 @@
 .gnb {
     font-size: 16px;
     font-weight: 700;
+    & ul {
+        margin-top: 6px;
+        margin-left: 16px;
+    }
 
-    li:hover {
-        text-decoration: underline;
+    li li {
+        margin-top: 6px;
+        transition:background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        border-radius: 4px;
+    }
+
+    
+    li li:hover {
+        background-color: #dcdee3;
     }
 
     li a.on {
         color: $linkthumbnailPoint;
+    }
+    li li.on {
+        background-color: $pointBg;
+
+        a {
+            color: $linkthumbnailPoint;
+            font-weight: 700;
+
+        }
     }
 }
 h1.title {
