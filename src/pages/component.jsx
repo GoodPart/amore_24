@@ -14,7 +14,8 @@ import {
     importCode,
     articleData1,
     articleData2,
-    articleData3
+    articleData3,
+    homeNewsData
 } from '../data/data';
 
 import { TitleComponent } from '../components/rull';
@@ -23,7 +24,7 @@ import { CopyBlock, a11yDark, CodeBlock } from 'react-code-blocks';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 import { Header } from '../components/header';
-import { TabWrap } from '../components/tabWrap/tabWrap';
+import { TabWrap, ArticleSwiperHome } from '../components/tabWrap/tabWrap';
 import ArticleWrap, { ButtonLink } from '../components/tabWrap/article';
 import Footer from '../components/footer';
 
@@ -460,6 +461,57 @@ export default function Component({title}) {
     ' language='jsx' theme={a11yDark} />
                                 </td>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div className='wrap__item'>
+                <TitleComponent depth={2} title="Article - 매장 소식" hashOption={{ id: "Article_news" }} />
+
+                <div className="description">
+                    '매장 소식' 영역
+                </div>
+                <div className="example-area example-area--min">
+                    <h3 className='title'>데모</h3>
+
+                    <ArticleSwiperHome data={homeNewsData} />
+                </div>
+                <div className="code-area">
+                    <h3 className='title'>코드</h3>
+
+                    <CopyBlock text="<ArticleSwiperHome data={homeNewsData} />" language='jsx' theme={a11yDark} />
+                </div>
+
+                <div className="type-area">
+                    <h3 className='title'>타입</h3>
+                    <table className='table--xLage'>
+                        <caption>상태 값</caption>
+                        <colgroup>
+                            <col width="10%" />
+                            <col width="20%" />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>옵션</th>
+                                <th>타입</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="align-l">data</td>
+                                <td className="align-l">Object</td>
+                                <td className="align-l">
+                                    <CodeBlock text={`{
+    title : "커스텀미 맞춤 스킨케어 서비스 오픈 및 이벤트 안내",
+    desc : "",
+    date : "2024.03.25" // 예시용 값
+}`} language='jsx' theme={a11yDark} />
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>

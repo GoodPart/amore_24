@@ -73,6 +73,44 @@ export const tabListData = [
     },
 ];
 
+export const homeNewsData = [
+    {
+        title: "커스텀미 맞춤 스킨케어 서비스 오픈 및 이벤트 안내",
+        desc: "",
+        date: "2024.03.25"
+    },
+    {
+        title: "[종료] 3월 팝업안내 : UNDEFINED",
+        desc: "",
+        date: "2024.03.11"
+    },
+    {
+        title: "[종료] 2월 팝업안내 : Cupid's Lab",
+        desc: "",
+        date: "2024.02.12"
+    },
+    {
+        title: "[종료] 3월 팝업안내 : UNDEFINED",
+        desc: "",
+        date: "2024.03.11"
+    },
+    {
+        title: "[종료] 2월 팝업안내 : Cupid's Lab",
+        desc: "",
+        date: "2024.02.12"
+    },
+    {
+        title: "[종료] 3월 팝업안내 : UNDEFINED",
+        desc: "",
+        date: "2024.03.11"
+    },
+    {
+        title: "[종료] 2월 팝업안내 : Cupid's Lab",
+        desc: "",
+        date: "2024.02.12"
+    }
+]
+
 export const mapInfo = {
     title: "아모레성수",
     desc: "내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!"

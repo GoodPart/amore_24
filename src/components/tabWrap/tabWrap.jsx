@@ -1,7 +1,8 @@
 import TabItem from "./tabItem"
 import ArticleWrap from "./article";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation  } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
+import { homeNewsData } from "../../data/data";
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -42,7 +43,7 @@ export function Detail({ articleData }) {
     const result = Object.values(articleData);
     return (
         <div className="prdDetail">
-            <ArticleSwiperHome />
+            <ArticleSwiperHome data={homeNewsData} />
             {
                 result.map((ele, index) => {
                     return <ArticleWrap key={index} data={ele} />
@@ -53,7 +54,7 @@ export function Detail({ articleData }) {
     )
 }
 
-export function ArticleSwiperHome() {
+export function ArticleSwiperHome({data}) {
     return (
         <div className="article recommendArea listHome">
             <div className="contents-wrap">
@@ -71,33 +72,22 @@ export function ArticleSwiperHome() {
                     }}
                     modules={[Navigation]}
                 >
-                    <SwiperSlide>
-                        <div className="list-item">
-                            <a href="#">
-                                <p class="tit">커스텀미 맞춤 스킨케어 서비스 오픈 및 이벤트 안내</p>
-                                <p class="desc"></p>
-                                <span class="date">2024.03.25</span>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="list-item">
-                            <a href="#">
-                                <p class="tit">커스텀미 맞춤 스킨케어 서비스 오픈 및 이벤트 안내</p>
-                                <p class="desc"></p>
-                                <span class="date">2024.03.25</span>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="list-item">
-                            <a href="#">
-                                <p class="tit">커스텀미 맞춤 스킨케어 서비스 오픈 및 이벤트 안내</p>
-                                <p class="desc"></p>
-                                <span class="date">2024.03.25</span>
-                            </a>
-                        </div>
-                    </SwiperSlide>
+                    {
+                        Object.values(data).slice(0, 3).map((ele, index) => {
+                            return (
+                                <SwiperSlide key={index}>
+                                    <div className="list-item">
+                                        <a href="#">
+                                            <p class="tit">{ele.title}</p>
+                                            <p class="desc">{ ele.desc}</p>
+                                            <span class="date">{ele.date}</span>
+                                        </a>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                    {/* 앞에서 3개를 자른 후, 마지막은 more 슬라이더 추가 */}
                     <SwiperSlide className="more">
                         <div className="list-item">
                             <a href="#">

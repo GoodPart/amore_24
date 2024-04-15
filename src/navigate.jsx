@@ -103,6 +103,10 @@ const headerList = [
                 link: "/component/#Tab",
             },
             {
+                title: "Article 매장 소식",
+                link: "/component/#Article_news",
+            },
+            {
                 title: "Article 정보",
                 link: "/component/#Article_info",
             },
