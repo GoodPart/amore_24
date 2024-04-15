@@ -185,7 +185,7 @@ export default function Component({title}) {
                 <TitleComponent depth={2} title="Swiper" hashOption={{ id: "swiper" }} />
 
                 <div className="description">
-                    스와이퍼 영역입니다.
+                    스와이퍼 영역입니다. 이미지 클릭시, '상세' 모달 팝업으로 이동 (과제 가이드에 따라 미구현)
                 </div>
                 <div className="example-area example-area--min">
                     <h3 className='title'>데모</h3>
@@ -388,7 +388,7 @@ export default function Component({title}) {
 
                 <div className="description">
                     각 내용으로 이동할 수 있는 탭, 'sticky'영역으로 상단에 고정된 'Header' 아래 위치한다.<br />
-                    구현시 스크롤 최 하단 까지 이동
+                    버튼 클릭시 스크롤 이동(탭 버튼의 offsetTop)<span style={{ color: "#ff5a5a", fontWeight : "bold"}}>*</span>
                 </div>
                 <div className="example-area example-area--min">
                     <h3 className='title'>데모</h3>

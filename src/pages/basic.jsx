@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { CopyBlock, nord, a11yDark } from 'react-code-blocks';
+import { CopyBlock, a11yDark } from 'react-code-blocks';
 import { TitleComponent } from '../components/rull';
 
 
@@ -70,7 +70,6 @@ export function Basic({title}) {
     return (
         <div>
             <div className="wrap__container">
-                {/* <h1 className='title'>기본환경</h1> */}
                 <TitleComponent depth={1} title="기본환경" />
                 <div className="wrap__item">
                     <TitleComponent depth={2} title="HTML 태그" hashOption={{id : "html_data"}} />

@@ -26,7 +26,7 @@
             }
 
             &:first-child {
-                margin-top: 60px;
+                margin-top: 80px;
             }
 
             li a {
@@ -58,8 +58,13 @@
 }
 
 .wrap__item {
-    // padding: 24px 0;
-    // border-top: 2px dashed #ccc;
+    .title a {
+        // display: none;
+        opacity: 0;
+    }
+    .title:hover a{
+        opacity: 1;
+    }
     .example-area {
         max-width: 1200px;
 
@@ -270,8 +275,22 @@
 
 /* 룰 스타일 - 시작 */
 .gnb {
+    position: relative;
     font-size: 16px;
     font-weight: 700;
+
+    &:after {
+        content: '담당자 : 박경수 \a연락처 : 010-7650-3525';
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        white-space: pre;
+        line-height: 21px;
+        padding: 8px 4px;
+        // border: 1px solid $gray_600;
+        background-color: $gray_100;
+        border-radius: 4px;
+    }
 
     & + .wrap {
         max-width: inherit;
@@ -280,7 +299,9 @@
 
     & ul {
         margin-top: 6px;
-        margin-left: 16px;
+        margin: 0 16px;
+        // margin-left: 16px;
+        // margin-right: ;
     }
 
     > li:last-of-type {
@@ -1088,6 +1109,104 @@ table td {
     border-top: none;
 }
 
+.prdDetail.recommendArea {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.apSwiper--news-list {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 26px 0;
+
+    .swiper-wrapper {
+        align-items: center;
+    }
+
+    .swiper-slide {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        -moz-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        max-width: 305px;
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        margin-left: 16px;
+
+        &:first-of-type {
+            margin-left: 20px;
+        }
+    }
+    .list-item {
+        width: 100%;
+    }
+    .desc,
+    .tit {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .tit {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -.08px;
+        color: #000;
+        margin-bottom: 10px;
+    }
+    .desc {
+        font-size: 14px;
+        letter-spacing: -.07px;
+        color: #333;
+        min-height: 36px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        max-height: 36px;
+        line-height: 18px;
+        white-space: inherit;
+        margin-bottom: 8px;
+    }
+    .date {
+        font-size: 12px;
+        letter-spacing: -.06px;
+        color: #999;
+    }
+    .more {
+        width: 122px !important;
+        background-color: inherit;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 0 !important;
+
+        a i {
+            display: flex;
+        }
+    }
+}
 /* tabPanel 스타일 - 끝 */
 
 /* 공유 버튼 스타일 */
@@ -1148,6 +1267,25 @@ table td {
         height: 32px;
         background-size: 32px 32px;
         background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.54/public/resource/core/svg/ic/ic_close_s32_040405.svg);
+    }
+
+    &.btnIr.moreRound {
+        width: 42px;
+        height: 42px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border: 1px solid #e2e2e2;
+
+        &:after {
+            width: 20px;
+            height: 20px;
+            -webkit-background-size: 20px 20px;
+            -moz-background-size: 20px 20px;
+            -o-background-size: 20px 20px;
+            background-size: 20px 20px;
+            background-image: url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_arrow_right_s20_666.svg);
+        }
     }
 }
 .popupBg {

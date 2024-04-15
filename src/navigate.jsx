@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import { Link, useLocation, } from "react-router-dom"
+import React, { useState } from "react"
+import { Link, } from "react-router-dom"
 import { HashLink } from "react-router-hash-link";
 
 const headerList = [
@@ -137,7 +137,7 @@ export default function Gnb() {
     }
 
     const scrollWithOffset = (el) => {
-        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset ;
         const yOffset = -80;
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
     }
