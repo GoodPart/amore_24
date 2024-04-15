@@ -78,9 +78,9 @@ export function ArticleSwiperHome({data}) {
                                 <SwiperSlide key={index}>
                                     <div className="list-item">
                                         <a href="#">
-                                            <p class="tit">{ele.title}</p>
-                                            <p class="desc">{ ele.desc}</p>
-                                            <span class="date">{ele.date}</span>
+                                            <p className="tit">{ele.title}</p>
+                                            <p className="desc">{ ele.desc}</p>
+                                            <span className="date">{ele.date}</span>
                                         </a>
                                     </div>
                                 </SwiperSlide>
@@ -92,7 +92,7 @@ export function ArticleSwiperHome({data}) {
                         <div className="list-item">
                             <a href="#">
                                 <i className="btnIr moreRound"></i>
-                                <span class="text">더 보기</span>
+                                <span className="text">더 보기</span>
                             </a>
                         </div>
                     </SwiperSlide>

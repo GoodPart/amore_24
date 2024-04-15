@@ -99,32 +99,34 @@ export default function Component({title}) {
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
 
-                    <table className='table--mid'>
-                        <caption>상태 값</caption>
-                        <thead>
-                            <tr>
-                                <th>종류</th>
-                                <th>타입</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="align-l">state</td>
-                                <td className="align-l">Boolean</td>
-                            </tr>
-                            <tr>
-                                <td className="align-l">hide</td>
-                                <td className="align-l">Boolean</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div>
+                        <table className='table--mid'>
+                            <caption>상태 값</caption>
+                            <thead>
+                                <tr>
+                                    <th>종류</th>
+                                    <th>타입</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="align-l">state</td>
+                                    <td className="align-l">Boolean</td>
+                                </tr>
+                                <tr>
+                                    <td className="align-l">hide</td>
+                                    <td className="align-l">Boolean</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <div className="wrap__item">
                 <TitleComponent depth={2} title="Header - 몰 이동 열기" hashOption={{ id: "Header_true" }} />
                 <div className="description">
                     로고 우측 화살표 버튼을 클릭하면 다른 몰로 이동할 수 있는 드롭다운 메뉴가 등장합니다.<br />
-                    클릭시 아이콘(화살표)는 180도 회전하며, 드롭다운 메뉴가 노출됩니다.
+                    클릭시 아이콘(화살표)은 180도 회전하며, 드롭다운 메뉴가 노출됩니다.
                 </div>
                 <div className="example-area">
                     <h3 className='title'>데모</h3>
@@ -137,31 +139,33 @@ export default function Component({title}) {
                 </div>
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table className='table--xLage'>
-                        <caption>상태 값</caption>
-                        <colgroup>
-                            <col width="20%"  />
-                            <col width="20%"  />
-                            <col />
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>종류</th>
-                                <th>타입</th>
-                                <th>비고</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="align-l">data</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">
-                                    <CopyBlock text={linkListCode} language='jsx' theme={a11yDark} />
-                                </td>
+                    <div>
+                        <table className='table--xLage'>
+                            <caption>상태 값</caption>
+                            <colgroup>
+                                <col width="20%" />
+                                <col width="20%" />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>종류</th>
+                                    <th>타입</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="align-l">data</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">
+                                        <CopyBlock text={linkListCode} language='jsx' theme={a11yDark} />
+                                    </td>
 
-                            </tr>
-                        </tbody>
-                    </table>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -178,7 +182,7 @@ export default function Component({title}) {
                 </div>
                 <div className="code-area">
                     <h3 className='title'>코드</h3>
-                    <CopyBlock text={`일정 스크롤이상(useRef) = ${stickyV};`} language='jsx' theme={a11yDark} />
+                    <CopyBlock text={`일정 스크롤이상(useRef) = ${stickyV}; //이상 움직이면 #aniHeader에 .is-hide클래스 제거`} language='jsx' theme={a11yDark} />
                 </div>
             </div>
 
@@ -238,64 +242,66 @@ export default function Component({title}) {
                 </div>
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table className='table--xLage'>
-                        <caption>상태 값</caption>
-                        <colgroup>
-                            <col width="20%" />
-                            <col width="20%" />
-                            <col />
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>옵션</th>
-                                <th>타입</th>
-                                <th>비고</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="align-l">className</td>
-                                <td className="align-l">String</td>
-                                <td className="align-l">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className="align-l">spaceBetween</td>
-                                <td className="align-l">double</td>
-                                <td className="align-l">슬라이드 사이 간격을 조절할 수 있습니다. </td>
-                            </tr>
-                            <tr>
-                                <td className="align-l">slidesPerView</td>
-                                <td className="align-l">double</td>
-                                <td className="align-l">swiper영역에 n개의 슬라이드를 노출 시킵니다.</td>
-                            </tr>
-                            <tr>
-                                <td className="align-l">centeredSlides</td>
-                                <td className="align-l">Boolean</td>
-                                <td className="align-l">슬라이드 아이템의 정렬을 가운대로 변경합니다.</td>
-                            </tr>
-                            <tr>
-                                <td className="align-l">navigation</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">스와이프의 좌우 이동 버튼을 추가합니다.</td>
-                            </tr>
-                            <tr>
-                                <td className="align-l">pagination</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">페이지네이션 타입을 프로그레스바로 변경.</td>
-                            </tr>
-                            <tr>
-                                <td className="align-l">autoplay</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">스와이프를 일정 시간마다 자동으로 움직이게 함</td>
-                            </tr>
-                            <tr>
-                                <td className="align-l">modules</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">추가한 모듈을 사용하기위함</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div>
+                        <table className='table--xLage'>
+                            <caption>상태 값</caption>
+                            <colgroup>
+                                <col width="20%" />
+                                <col width="20%" />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>옵션</th>
+                                    <th>타입</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="align-l">className</td>
+                                    <td className="align-l">String</td>
+                                    <td className="align-l">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="align-l">spaceBetween</td>
+                                    <td className="align-l">double</td>
+                                    <td className="align-l">슬라이드 사이 간격을 조절할 수 있습니다. </td>
+                                </tr>
+                                <tr>
+                                    <td className="align-l">slidesPerView</td>
+                                    <td className="align-l">double</td>
+                                    <td className="align-l">swiper영역에 n개의 슬라이드를 노출 시킵니다.</td>
+                                </tr>
+                                <tr>
+                                    <td className="align-l">centeredSlides</td>
+                                    <td className="align-l">Boolean</td>
+                                    <td className="align-l">슬라이드 아이템의 정렬을 가운대로 변경합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td className="align-l">navigation</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">스와이프의 좌우 이동 버튼을 추가합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td className="align-l">pagination</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">페이지네이션 타입을 프로그레스바로 변경.</td>
+                                </tr>
+                                <tr>
+                                    <td className="align-l">autoplay</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">스와이프를 일정 시간마다 자동으로 움직이게 함</td>
+                                </tr>
+                                <tr>
+                                    <td className="align-l">modules</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">추가한 모듈을 사용하기위함</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 
             </div>
@@ -385,7 +391,7 @@ export default function Component({title}) {
 
 
             <div className="wrap__item">
-                <TitleComponent depth={2} title="tabWrap = Tabs" hashOption={{ id: "Tab" }} />
+                <TitleComponent depth={2} title="tabWrap - Tabs" hashOption={{ id: "Tab" }} />
 
                 <div className="description">
                     각 내용으로 이동할 수 있는 탭, 'sticky'영역으로 상단에 고정된 'Header' 아래 위치한다.<br />
@@ -404,26 +410,27 @@ export default function Component({title}) {
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
 
-                    <table className='table--xLage'>
-                        <colgroup>
-                            <col width="20%" />
-                            <col width="10%" />
-                            <col />
-                        </colgroup>
-                        <caption>상태 값</caption>
-                        <thead>
-                            <tr>
-                                <th>종류</th>
-                                <th>타입</th>
-                                <th>비고</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="align-l">data</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">
-                                    <CodeBlock text='{
+                    <div>
+                        <table className='table--xLage'>
+                            <colgroup>
+                                <col width="20%" />
+                                <col width="10%" />
+                                <col />
+                            </colgroup>
+                            <caption>상태 값</caption>
+                            <thead>
+                                <tr>
+                                    <th>종류</th>
+                                    <th>타입</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="align-l">data</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">
+                                        <CodeBlock text='{
     title: "홈",
     queryPath: "home", articles : [{...}]},
 {
@@ -436,33 +443,34 @@ export default function Component({title}) {
     title: "소식",
     queryPath: "news"},
                                     ' language='jsx' theme={a11yDark} />
-                                </td>
+                                    </td>
 
-                            </tr>
-                            <tr>
-                                <td className="align-l">tab</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">
-                                    <CodeBlock text="
+                                </tr>
+                                <tr>
+                                    <td className="align-l">tab</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">
+                                        <CodeBlock text="
                                     {tabData: 'home' || 'introduce' || ...}
                                     " language='jsx' theme={a11yDark} />
-                                  </td>
-                            </tr>
-                            <tr>
-                                <td className="align-l">onChange</td>
-                                <td className="align-l">function</td>
-                                <td className="align-l">
-                                    <CodeBlock text='
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="align-l">onChange</td>
+                                    <td className="align-l">function</td>
+                                    <td className="align-l">
+                                        <CodeBlock text='
                                     const onChangeTab = ({tab}) => {
         setTab({
             tabData : tab
         })
     }
     ' language='jsx' theme={a11yDark} />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -485,35 +493,37 @@ export default function Component({title}) {
 
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table className='table--xLage'>
-                        <caption>상태 값</caption>
-                        <colgroup>
-                            <col width="10%" />
-                            <col width="20%" />
-                            <col />
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>옵션</th>
-                                <th>타입</th>
-                                <th>비고</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="align-l">data</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">
-                                    <CodeBlock text={`{
+                    <div>
+                        <table className='table--xLage'>
+                            <caption>상태 값</caption>
+                            <colgroup>
+                                <col width="10%" />
+                                <col width="20%" />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>옵션</th>
+                                    <th>타입</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="align-l">data</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">
+                                        <CodeBlock text={`{
     title : "커스텀미 맞춤 스킨케어 서비스 오픈 및 이벤트 안내",
     desc : "",
     date : "2024.03.25" // 예시용 값
 }`} language='jsx' theme={a11yDark} />
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         
@@ -536,31 +546,33 @@ export default function Component({title}) {
 
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table className='table--xLage'>
-                        <caption>상태 값</caption>
-                        <colgroup>
-                            <col width="10%" />
-                            <col width="20%" />
-                            <col />
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>옵션</th>
-                                <th>타입</th>
-                                <th>비고</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="align-l">data</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">
-                                    <CodeBlock text={articleData1} language='jsx' theme={a11yDark} />
-                                </td>
-                            </tr>
-                           
-                        </tbody>
-                    </table>
+                    <div>
+                        <table className='table--xLage'>
+                            <caption>상태 값</caption>
+                            <colgroup>
+                                <col width="10%" />
+                                <col width="20%" />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>옵션</th>
+                                    <th>타입</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="align-l">data</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">
+                                        <CodeBlock text={articleData1} language='jsx' theme={a11yDark} />
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -585,31 +597,33 @@ export default function Component({title}) {
 
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table className='table--xLage'>
-                        <caption>상태 값</caption>
-                        <colgroup>
-                            <col width="10%" />
-                            <col width="20%" />
-                            <col />
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>옵션</th>
-                                <th>타입</th>
-                                <th>비고</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="align-l">data</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">
-                                    <CodeBlock text={articleData2} language='jsx' theme={a11yDark} />
-                                </td>
-                            </tr>
-                           
-                        </tbody>
-                    </table>
+                    <div>
+                        <table className='table--xLage'>
+                            <caption>상태 값</caption>
+                            <colgroup>
+                                <col width="10%" />
+                                <col width="20%" />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>옵션</th>
+                                    <th>타입</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="align-l">data</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">
+                                        <CodeBlock text={articleData2} language='jsx' theme={a11yDark} />
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -634,31 +648,33 @@ export default function Component({title}) {
 
                 <div className="type-area">
                     <h3 className='title'>타입</h3>
-                    <table>
-                        <caption>상태 값</caption>
-                        <colgroup>
-                            <col width="10%" />
-                            <col width="20%" />
-                            <col />
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>옵션</th>
-                                <th>타입</th>
-                                <th>비고</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="align-l">data</td>
-                                <td className="align-l">Object</td>
-                                <td className="align-l">
-                                    <CodeBlock text={articleData3} language='jsx' theme={a11yDark} />
-                                </td>
-                            </tr>
-                           
-                        </tbody>
-                    </table>
+                    <div>
+                        <table>
+                            <caption>상태 값</caption>
+                            <colgroup>
+                                <col width="10%" />
+                                <col width="20%" />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>옵션</th>
+                                    <th>타입</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="align-l">data</td>
+                                    <td className="align-l">Object</td>
+                                    <td className="align-l">
+                                        <CodeBlock text={articleData3} language='jsx' theme={a11yDark} />
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 

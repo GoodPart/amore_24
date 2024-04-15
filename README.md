@@ -11,5 +11,6 @@
 ## Install
 ### 1. 폴더 내부에서 터미널을 킵니다. (윈도우는 `Cmd` 또는 `git bash`)
 ### 2. `package.json` 파일이 존재하는 위치로 이동합니다.
-### 3. `npm install` 명령어를 통해 필요 모듈을 설치합니다. (해당 명령어는 node가 설치 되어있어야 합니다)
+### 3. `npm install` 명령어를 통해 실행에 필요 모듈을 설치합니다. (해당 명령어는 `node`가 설치 되어있어야 합니다)
+- https://nodejs.org/en/download (node download)
 ### 4. 설치가 완료 되면 다음 명령어를 통해 프로젝트를 실행합니다. `npm start` or `npm run start`

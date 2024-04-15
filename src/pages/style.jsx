@@ -65,7 +65,6 @@ export function StyleGuide({title}) {
             <div className="wrap__container">
                 <TitleComponent depth={1} title={"스타일"} />
                 <div className="wrap__item">
-                    {/* <h2 className="title">컬러셋</h2> */}
                     <TitleComponent depth={2} title={"컬러셋"} hashOption={{ id: "colorset"}} />
 
                     <div className="description">사용 컬러셋입니다.</div>
@@ -82,7 +81,7 @@ export function StyleGuide({title}) {
                 <div className="wrap__item">
                     <TitleComponent depth={2} title={"MediaQuery"} hashOption={{ id: "media_query" }} />
 
-                    <div className="description">break point 영역</div>
+                    <div className="description">기본 MediaQuery 넓이는 '1023px'을 기준으로하며, 해당 가이드를 '모바일'디바이스로 변경하면 확인 가능</div>
                     <div className="code-area">
                         <h3 className="title">코드</h3>
 
@@ -95,12 +94,24 @@ export function StyleGuide({title}) {
     width : 1024px
 }
 
-/* Mobile 환경 */
+/* PC Device */
 @media screen and (max-width: 1023px) {
+   ...
+}
+/* PC Device */
+
+/* Mobile Device */
+@media screen and (hover: none) and (pointer: coarse) {
     .wrap {
-        width : 100%
+        width: 100%;
+
+        >ul+div {
+            margin: 24px auto 24px;
+            width: 100%;
+        }
     }
 }
+/* Mobile Device */
 `} language='css' theme={a11yDark} />
                     </div>
                 </div>

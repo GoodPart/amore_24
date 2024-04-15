@@ -53,7 +53,7 @@ const headerList = [
                 link: "/style/#colorset"
             },
             {
-                title: "mediaQuery",
+                title: "MediaQuery",
                 link: "/style/#media_query"
             },
         ]
