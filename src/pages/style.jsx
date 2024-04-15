@@ -1,5 +1,6 @@
 import { CodeBlock, a11yDark } from 'react-code-blocks'
 import { useEffect } from 'react'
+import { TitleComponent } from '../components/rull'
 const colorList = [
     {
         name : "$black",
@@ -62,9 +63,11 @@ export function StyleGuide({title}) {
     return (
         <div>
             <div className="wrap__container">
-            <h1 className='title'>스타일</h1>
+                <TitleComponent depth={1} title={"스타일"} />
                 <div className="wrap__item">
-                    <h2 className="title">컬러셋</h2>
+                    {/* <h2 className="title">컬러셋</h2> */}
+                    <TitleComponent depth={2} title={"컬러셋"} hashOption={{ id: "colorset"}} />
+
                     <div className="description">사용 컬러셋입니다.</div>
                     <div className="example-area" style={{display : "flex", flexDirection : "column", gap : 20}}>
                         {
@@ -77,7 +80,8 @@ export function StyleGuide({title}) {
                 </div>
 
                 <div className="wrap__item">
-                    <h2 className="title">MediaQuery</h2>
+                    <TitleComponent depth={2} title={"MediaQuery"} hashOption={{ id: "media_query" }} />
+
                     <div className="description">break point 영역</div>
                     <div className="code-area">
                         <h3 className="title">코드</h3>

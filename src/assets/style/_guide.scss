@@ -272,9 +272,23 @@
 .gnb {
     font-size: 16px;
     font-weight: 700;
+
+    & + .wrap {
+        max-width: inherit;
+    }
+
+
     & ul {
         margin-top: 6px;
         margin-left: 16px;
+    }
+
+    > li:last-of-type {
+        margin-bottom: 60px;
+    }
+
+    > li {
+        margin-bottom: 12px;
     }
 
     li li {
@@ -282,6 +296,7 @@
         transition:background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
         border-radius: 4px;
     }
+    
 
     
     li li:hover {
@@ -1324,7 +1339,7 @@ table td {
 @media screen and (max-width: 1023px) {
 
     .o2o-skin {
-        width: 100%;
+        width: 100% ;
         .example-area {
             width: 100%;
             max-width: calc(100vw - 48px);

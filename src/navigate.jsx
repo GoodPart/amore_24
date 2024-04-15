@@ -5,15 +5,58 @@ import { HashLink } from "react-router-hash-link";
 const headerList = [
     {
         title: "기본",
-        link : "/",
+        link: "/",
+        children: [
+            {
+                title: "Html 태그",
+                link : "/#html_data"
+            },
+            {
+                title: "Vh 이슈",
+                link : "/#vh_issue"
+            },
+            {
+                title: "Head 태그",
+                link: "/#head_data"
+            },
+            {
+                title: "package",
+                link: "/#package"
+            },
+
+        ]
     },
     {
         title: "기본규칙",
-        link : "/rull_name",
+        link: "/rull_name",
+        children: [
+            {
+                title: "네임 규칙",
+                link : "/rull_name/#rull_name"
+            },
+            {
+                title: "예약어",
+                link : "/rull_name/#reserve_name"
+            },
+            {
+                title: "이미지 네이밍 규칙",
+                link: "/rull_name/#rull_name_of_img"
+            },
+        ]
     },
     {
         title: "스타일",
-        link : "/style",
+        link: "/style",
+        children: [
+            {
+                title: "컬러셋",
+                link: "/style/#colorset"
+            },
+            {
+                title: "mediaQuery",
+                link: "/style/#media_query"
+            },
+        ]
     },
     {
         title: "컴포넌트",
@@ -86,22 +129,18 @@ export default function Gnb() {
         dpt_2 : ''
     });
 
-    function changeNav(_this) {
-        setNav(_this)
-        
-        
+    function changeNav(_this, depth) {
+        setNav(_this);
+        if (depth) {
+            window.scrollTo(0, 0);
+        }
     }
 
-    function hashMoveScrollOffsetChange() {
-        
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -80;
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
     }
-
-    const location = useLocation();
-    useEffect(() => {
-        setTimeout(() => {
-            window.scrollTo({top : window.scrollY - 80})
-        }, 10)
-    }, [location])
 
     return (
         <ul className="gnb">
@@ -109,13 +148,13 @@ export default function Gnb() {
                 Object.values(headerList).map((ele, index) => {
                     return (
                         <li key={index}>
-                            <Link to={ele.link} onClick={() => changeNav({dpt_1 : ele.link, dpt_2 : ''})} className={nav.dpt_1 === ele.link ? "on" : ""}>{ele.title}</Link>
+                            <Link to={ele.link} onClick={() => changeNav({dpt_1 : ele.link, dpt_2 : ''}, true)} className={nav.dpt_1 === ele.link ? "on" : ""}>{ele.title}</Link>
                             {
                                 ele.children ? (
                                     <ul>
                                         {
                                             Object.values(ele.children).map((child, index2) => {
-                                                return <li key={index2} className={nav.dpt_2 === child.link ? "on" : ""}><HashLink to={child.link} onClick={() => { changeNav({ dpt_1: ele.link, dpt_2: child.link });  hashMoveScrollOffsetChange()}}>{child.title}</HashLink></li>
+                                                return <li key={index2} className={nav.dpt_2 === child.link ? "on" : ""}><HashLink smooth to={child.link} scroll={(el)=> scrollWithOffset(el)} onClick={() => { changeNav({ dpt_1: ele.link, dpt_2: child.link })}}>{child.title}</HashLink></li>
                                             })
                                         }
                                     </ul>

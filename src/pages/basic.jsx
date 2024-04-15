@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { CopyBlock, nord, a11yDark } from 'react-code-blocks';
+import { TitleComponent } from '../components/rull';
 
 
 const htmlSpec = `
@@ -69,16 +70,18 @@ export function Basic({title}) {
     return (
         <div>
             <div className="wrap__container">
-            <h1 className='title'>기본환경</h1>
+                {/* <h1 className='title'>기본환경</h1> */}
+                <TitleComponent depth={1} title="기본환경" />
                 <div className="wrap__item">
-                    <h2 className="title">Html 태그</h2>
+                    <TitleComponent depth={2} title="HTML 태그" hashOption={{id : "html_data"}} />
                     <div className="description">html 및 head영역에 대한 기본 사항입니다.</div>
                     <div className="example-area">
                         <CopyBlock text={htmlSpec} language='js' theme={a11yDark} />
                     </div>
                 </div>
                 <div className="wrap__item">
-                    <h2 className="title">vh 이슈</h2>
+                    <TitleComponent depth={2} title="VH 이슈" hashOption={{ id: "vh_issue" }} />
+
                     <div className="description">해당 코드를 사용하여 뷰포트 이슈를 제거</div>
                     <div className="example-area">
                         <CopyBlock text={vhIssue} language='js' theme={a11yDark} />
@@ -86,14 +89,16 @@ export function Basic({title}) {
                 </div>
 
                 <div className="wrap__item">
-                    <h2 className="title">head 태그</h2>
+                    <TitleComponent depth={2} title="Head 태그" hashOption={{ id: "head_data" }} />
+
                     <div className="description">head의 Meta 태그</div>
                     <div className="example-area">
                         <CopyBlock text={metaTag} language='js' theme={a11yDark} />
                     </div>
                 </div>
                 <div className="wrap__item">
-                    <h2 className="title">package</h2>
+                    <TitleComponent depth={2} title="Package" hashOption={{ id: "package" }} />
+
                     <div className="description">사용한 패키지 및 버전</div>
                     <div className="example-area">
                         <CopyBlock text={`

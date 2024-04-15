@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { TitleComponent } from "../components/rull"
 export function Name({title}) {
     
     useEffect(() => {
@@ -9,9 +10,9 @@ export function Name({title}) {
         <div>
 
             <div className="rull_area">
-            <h1 className="title">퍼블리싱 규칙</h1>
+                <TitleComponent depth={1} title="퍼블리싱 규칙" />
                 <div className="rull_area__item">
-                    <h2 className="title">네임규칙</h2>
+                    <TitleComponent depth={2} title="네임 규칙" hashOption={{id : "rull_name"}}/>
                     <div className="description">
                         ID는 개발을 위해서만 사용하고, input뒤 라벨등의 바인드를 제외하곤 사용하지 않는다.<br />
                     </div>
@@ -48,7 +49,8 @@ export function Name({title}) {
                 </div>
 
                 <div className="rull_area__item">
-                    <h2 className="title">예약어</h2>
+                    <TitleComponent depth={2} title="예약어" hashOption={{ id: "reserve_name" }} />
+
                     <div className="rull_area__content">
                         <h3 className="title">예시</h3>
                         <table className="table--xLage">
@@ -148,7 +150,8 @@ export function Name({title}) {
                 </div>
 
                 <div className="rull_area__item">
-                    <h2 className="title">이미지 네이밍 규칙</h2>
+                    <TitleComponent depth={2} title="이미지 네이밍 규칙" hashOption={{ id: "rull_name_of_img" }} />
+
                     <div className="rull_area__content">
                         <h3 className="title">예시</h3>
 
